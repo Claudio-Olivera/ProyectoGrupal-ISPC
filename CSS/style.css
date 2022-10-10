@@ -30,7 +30,11 @@ a.nav-link:hover{
 
 @media screen and (max-width: 995px){
     .nav{
-        background-color: rebeccapurple;
+        background-color: #f8f9fb;
         z-index: 2;
+        
+    }
+    .navbar{
+        padding-bottom: 0 !important;
     }
 }

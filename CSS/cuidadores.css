@@ -11,6 +11,7 @@
     width: 100vw;
     background-color: rgb(137, 191, 212);
     flex-wrap: wrap;
+
 }
 .espaciador{    
     margin:1rem;
@@ -18,6 +19,7 @@
 
 .card{
     width: 18rem;
+    z-index: 1;
 }
 
 .container__img{
