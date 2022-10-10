@@ -1,0 +1,27 @@
+.h1__cuidadores{
+    margin-top: 2%;
+    text-align: center;
+}
+
+.card__cuidadores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: rgb(137, 191, 212);
+    flex-wrap: wrap;
+}
+.espaciador{    
+    margin:1rem;
+}
+
+.card{
+    width: 18rem;
+}
+
+.container__img{
+    justify-content: center;
+    align-items: center;
+    margin: 1.5% 0% 1.5% 0%;
+}
