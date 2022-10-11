@@ -11,7 +11,7 @@
 }
 
 .nav__bgColor{
-    background-color: #e79afff6 !important;
+    background-color: #e79afff6;
 }
 
 /* .logo{
@@ -49,6 +49,23 @@ a.nav-link:hover{
     background-color: #f0c4fd;
 } 
 
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #f2d3fc;
+}
+
+
+footer{
+    margin-top: auto;
+    width: 100vw;
+    background-color: blueviolet;
+}
 
 @media screen and (max-width: 995px){
     .nav{
