@@ -7,12 +7,28 @@
     font-family: 'Poppins', sans-serif;
 }
 .set__nav{
-    height: 75px;
+    height: 75px;    
 }
+
+.nav__bgColor{
+    background-color: #e79afff6 !important;
+}
+
+/* .logo{
+    background: url("../assets/img/CuidaPetsFinale.png") ;
+    width: 100vw;
+    height: 300px;
+    background-position:center ;
+    background-size: cover;
+    background-color: #f0c4fd;
+    text-indent:-99999px;
+} */
+
 
 .navbar-light .navbar-toggler {
     color: transparent !important;
     border-color: transparent !important;
+    
 }
 
 a.nav-link{
@@ -28,9 +44,17 @@ a.nav-link:hover{
 } 
 
 
+.div__img img{
+    width: 100vw;
+    background-color: #f0c4fd;
+} 
+
+
 @media screen and (max-width: 995px){
     .nav{
-        background-color: #f8f9fb;
+        background-color: #e081fd ;
+        /* #f0c4fd  
+        claro gris : #f8f9fb*/
         z-index: 2;
         
     }
