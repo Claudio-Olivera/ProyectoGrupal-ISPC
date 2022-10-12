@@ -3,6 +3,25 @@
 /* Font titulo */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+:root{
+    --pistachoGreen:#c4e5c9;
+    --babyPink:#f8cce0;
+    --babyBlue:#c1e5f8;
+    --magicMint:#8af0ce;
+    --peach:#f8b184;
+    --lavender:#c8c3f8;
+    --violetFluor:#8b2fe0;
+    
+    
+    --blue:#2e3d50;
+    --grey:#8894a1;
+    --sand:#feeecd;
+    --pastelYellow:#eff57c;
+    --softBrown:#d7b692;
+    --Brown:#c4762a;
+
+}
+
 *{    
     margin: 0;
     padding: 0;
@@ -14,7 +33,7 @@
 }
 
 .nav__bgColor{
-    background-color: #e79afff6;
+    background-color: var(--softBrown);
 }
 
 .navbar-light .navbar-toggler {
@@ -28,7 +47,7 @@ a.nav-link{
 
 a.nav-link:hover{
     transition: 1s;
-    color: blueviolet !important;
+    color: var(--blue) !important;
     font-weight: 700;
     font-size: 20px;
     border: 1px solid ;
@@ -37,7 +56,7 @@ a.nav-link:hover{
 .div__header{
     width: 100vw;
     height: 30%;
-    background-color: #f0c4fd;
+    background-color: var(--sand);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,6 +77,7 @@ a.nav-link:hover{
     text-align: center;
     animation-name: fade;
     animation-duration: 6s;
+    color: black ;
 }
 @keyframes fade {
     0% {
@@ -78,16 +98,33 @@ body{
     background-color: #f2d3fc;
 }
 
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section__title{
+    margin-top: 2%;
+    width: 80%;
+}
+
+.section__p{
+    text-align: justify;
+    width: 60%;
+}
+
 
 footer{
     margin-top: auto;
     width: 100vw;
-    background-color: blueviolet;
+    background-color: var(--grey);
 }
 
 @media screen and (max-width: 995px){
     .nav{
-        background-color: #e081fd ;
+        background-color: var(--softBrown) ;
         z-index: 2;
     }
     .navbar{
