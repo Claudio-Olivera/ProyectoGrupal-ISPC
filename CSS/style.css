@@ -1,4 +1,7 @@
+/* Font subtitulos y todo lo demas  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap');
+/* Font titulo */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 *{    
     margin: 0;
@@ -14,21 +17,9 @@
     background-color: #e79afff6;
 }
 
-/* .logo{
-    background: url("../assets/img/CuidaPetsFinale.png") ;
-    width: 100vw;
-    height: 300px;
-    background-position:center ;
-    background-size: cover;
-    background-color: #f0c4fd;
-    text-indent:-99999px;
-} */
-
-
 .navbar-light .navbar-toggler {
     color: transparent !important;
     border-color: transparent !important;
-    
 }
 
 a.nav-link{
@@ -43,11 +34,38 @@ a.nav-link:hover{
     border: 1px solid ;
 } 
 
-
-.div__img img{
+.div__header{
     width: 100vw;
+    height: 30%;
     background-color: #f0c4fd;
-} 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+
+.house{
+    width: 25%;
+    height: 25%;
+    margin-left: -6%;
+    margin-bottom: 6%;
+    animation-name: fade;
+    animation-duration: 6s;
+}
+
+/* animacion nueva creada */
+.h1__title{
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    animation-name: fade;
+    animation-duration: 6s;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+}
+/* fin nueva animacion */
+
 
 html{
     height: 100%;
@@ -70,10 +88,7 @@ footer{
 @media screen and (max-width: 995px){
     .nav{
         background-color: #e081fd ;
-        /* #f0c4fd  
-        claro gris : #f8f9fb*/
         z-index: 2;
-        
     }
     .navbar{
         padding-bottom: 0 !important;
