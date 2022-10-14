@@ -12,6 +12,8 @@
     --lavender:#c8c3f8;
     --violetFluor:#8b2fe0;
     
+    --fondo:#fdf6e9;
+    --fondoSection:#dfdcf7;
     
     --blue:#2e3d50;
     --grey:#8894a1;
@@ -33,7 +35,7 @@
 }
 
 .nav__bgColor{
-    background-color: var(--softBrown);
+    background-color: var(--lavender);
 }
 
 .navbar-light .navbar-toggler {
@@ -43,11 +45,12 @@
 
 a.nav-link{
     transition: 1s;
+    font-weight: bold;
 }
 
 a.nav-link:hover{
     transition: 1s;
-    color: var(--blue) !important;
+    color: var(--violetFluor) !important;
     font-weight: 700;
     font-size: 20px;
     border: 1px solid ;
@@ -95,8 +98,9 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    background-color: #f2d3fc;
+    background-color: var(--fondo) !important;
 }
+
 main{
     display: flex;
     align-items: center;
@@ -110,7 +114,7 @@ main{
     justify-content: center;
     flex-direction: column;
     margin: 2%;
-    background-color: var(--sand);
+    background-color: var(--fondoSection);
     border-radius: 5px;
     box-shadow: 1px 1px 8px 1px var(--grey);
 }
@@ -125,7 +129,8 @@ main{
 
 .section__p{
     text-align: justify;
-    width: 60%;
+    width: 70%;
+    font-size: 1.2rem;
 }
 
 .fa-brands{
@@ -135,13 +140,18 @@ main{
 
 .fa-brands:hover{
     transition: 0.8s;
-    color: var(--blue);
+    color: var(--violetFluor);
     font-size: 35px;
+}
+
+.img__user{
+    width: 50px;
+    height: 50px;
 }
 
 @media screen and (max-width: 995px){
     .nav{
-        background-color: var(--softBrown) ;
+        background-color: var(--lavender) ;
         z-index: 2;
     }
     .navbar{
