@@ -3,25 +3,16 @@
 /* Font titulo */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+
+/* Paleta de colores */
 :root{
-    --pistachoGreen:#c4e5c9;
-    --babyPink:#f8cce0;
-    --babyBlue:#c1e5f8;
-    --magicMint:#8af0ce;
-    --peach:#f8b184;
-    --lavender:#c8c3f8;
     --violetFluor:#8b2fe0;
-    
     --fondo:#fdf6e9;
+    --lavender:#c8c3f8;
     --fondoSection:#dfdcf7;
-    
-    --blue:#2e3d50;
     --grey:#8894a1;
     --sand:#feeecd;
-    --pastelYellow:#eff57c;
-    --softBrown:#d7b692;
     --Brown:#c4762a;
-
 }
 
 *{    
