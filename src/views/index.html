@@ -73,7 +73,6 @@
                         <label for="Email">Email<span class="text-danger">*</span></label>
                         <input type="email" name="email" class="form-control" id="Email" placeholder="ingresa tu Email">
                     </div>
-
                     <div class="mb-3">
                         <label for="Contraseña">Contraseña<span class="text-danger">*</span></label>
                         <input type="password" name="contraseña" class="form-control" id="Contraseña"
@@ -92,7 +91,7 @@
                 <p class="text-center">No tienes cuenta? crea una aquí:
                     <a href="" data-bs-target="#RegistrateModal" data-bs-toggle="modal" data-bs-dismiss="modal"
                         title="registrate">
-                        <button type="button" class="btn btn-primary mx-auto w-25">
+                        <button type="button" id="btn__register" class="btn text-white mx-auto w-25">
                             Registro
                         </button>
                     </a>
@@ -116,6 +115,7 @@
                         <input type="text" name="nombre" class="form-control" id="Nombre"
                             placeholder="ingresa tu Nombre" required>
                     </div>
+                    
                     <div class="mb-3">
                         <label for="Apellido">Apellido<span class="text-danger">*</span></label>
                         <input type="text" name="apellido" class="form-control" id="Apellido"
