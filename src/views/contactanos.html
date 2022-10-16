@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- CSS -->
-        <link rel="stylesheet" href="/CSS/sobreNosotros.css" />
-        <link rel="stylesheet" href="/CSS/style.css" />
-        <!-- BOOTSTRAP CSS-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <!-- BOOTSTRAP JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/contactanos.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- BOOTSTRAP JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
         <!--*** FALTA favicon ***-->
-    <title>SobreNosotros-CuidaPets</title>
-
+    <title>Contactanos-CuidaPets</title>
 </head>
 
 <body>
@@ -21,7 +24,7 @@
         <div class="div__header">
                 <h1 class="h1__title display-1">
                     CuidaPets
-                    <img class="house img-fluid " src="/assets/img/house-removebg-preview.png" alt="logotipo de perro y gato dentro de una casa">
+                    <img class="house img-fluid " src="./assets/IMG/house-removebg-preview.png" alt="logotipo de perro y gato dentro de una casa">
                 </h1>
         </div> 
     </header>
@@ -37,13 +40,13 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item nav justify-content-center">
-                        <a class="nav-link active" href="/">Home</a>
+                        <a class="nav-link active" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item nav justify-content-center">
-                        <a class="nav-link active" href="./Cuidadores.html">Cuidadores</a>
+                        <a class="nav-link active" href="./sobreNosotros.html">Sobre Nosotros</a>
                     </li>
                     <li class="nav-item nav justify-content-center">
-                        <a class="nav-link active" href="./Contactanos.html">Contáctanos</a>
+                        <a class="nav-link active" href="./cuidadores.html">Cuidadores</a>
                     </li>
                 </ul>
             </div>
@@ -52,14 +55,36 @@
     </div>
 <!-- FIN DE NAVBAR -->
 
-    <h1 class="h1__sobreNosotros">Sobre Nosotros</h1>
- 
+    <main>
+        <h1 class="h1__contactanos">Contáctanos</h1>
+        <div class="container py-4">
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label class="form-label" for="name">Nombre</label>
+                    <input class="form-control" id="name" type="text" placeholder="Nombre"/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" id="email" type="email" placeholder="Email" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="mensaje">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" type="text" placeholder="Mensaje"></textarea>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-lg" type="submit">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+   
 <div class="container">
 
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="/PAGES/PreguntasFrecuentes.html" class="nav-link px-2 text-muted">Preguntas frecuentes</a></li>
+            <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="./faq.html" class="nav-link px-2 text-muted">Preguntas frecuentes</a></li>
         </ul>
         <h6 class="text-center">Nuestras redes sociales</h6>
         <div class="d-flex align-items-center justify-content-center">
@@ -73,6 +98,7 @@
 </div>
 
 </body>
+
 <!-- Font awesome -->
 <script src="https://kit.fontawesome.com/6dfa6ca8b0.js" crossorigin="anonymous"></script>
 </html>
