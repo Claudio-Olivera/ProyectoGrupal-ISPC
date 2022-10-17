@@ -17,3 +17,10 @@
     width: 200px;
     height:200px;
 }
+
+@media screen and (max-width: 400px){
+    #percomp{
+        width: fit-content;
+        height: auto;
+    }
+}
