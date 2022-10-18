@@ -4,24 +4,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 :root{
-    --pistachoGreen:#c4e5c9;
-    --babyPink:#f8cce0;
-    --babyBlue:#c1e5f8;
-    --magicMint:#8af0ce;
-    --peach:#f8b184;
-    --lavender:#c8c3f8;
-    --violetFluor:#8b2fe0;
-    
+    /* --pistachoGreen:#c4e5c9; */
+    /* --babyPink:#f8cce0; */
+    /* --babyBlue:#c1e5f8; */
+    /* --magicMint:#8af0ce; */
+    /* --peach:#f8b184; */
+    /* --pastelYellow:#eff57c; */
+    /* --softBrown:#d7b692; */
+
     --fondo:#fdf6e9;
     --fondoSection:#dfdcf7;
-    
-    --blue:#2e3d50;
+    --lavender:#c8c3f8;
+    --violetFluor:#8b2fe0;
+    --violetFluorReduced:#9b2fff;
     --grey:#8894a1;
     --sand:#feeecd;
-    --pastelYellow:#eff57c;
-    --softBrown:#d7b692;
     --Brown:#c4762a;
-
 }
 
 *{    
@@ -74,7 +72,7 @@ a.nav-link:hover{
     animation-duration: 6s;
 }
 
-/* animacion nueva creada */
+/* animacion header  */
 .h1__title{
     font-family: 'Fredoka One', cursive;
     text-align: center;
@@ -87,7 +85,7 @@ a.nav-link:hover{
         opacity: 0;
     }
 }
-/* fin nueva animacion */
+/* fin animacion */
 
 
 html{
@@ -147,6 +145,14 @@ main{
 .img__user{
     width: 50px;
     height: 50px;
+}
+
+.modal-content{
+    background-color: var(--fondoSection) !important;
+}
+
+#btn__register{
+    background-color: var(--violetFluor);
 }
 
 @media screen and (max-width: 995px){
