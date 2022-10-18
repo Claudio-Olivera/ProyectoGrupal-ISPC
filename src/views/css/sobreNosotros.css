@@ -2,3 +2,25 @@
     margin-top: 2%;
     text-align: center;
 }
+
+#percomp{
+    width: 400px;
+    height: 400px;
+}
+
+#mapargent{
+    width: 200px;
+    height: 400px;
+}
+
+#huella{
+    width: 200px;
+    height:200px;
+}
+
+@media screen and (max-width: 400px){
+    #percomp{
+        width: fit-content;
+        height: auto;
+    }
+}

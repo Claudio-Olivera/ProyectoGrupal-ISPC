@@ -1,0 +1,1 @@
+Para ver el diagrama de clase acceder a la siguiente web https://app.diagrams.net/ y cargar el archivo en la misma.
