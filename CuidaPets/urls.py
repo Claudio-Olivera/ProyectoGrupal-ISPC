@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 # Aqui se especifican las rutas que se pueden visitar.
+
+#"Crear hello world" ahora importo la funcion hello desde myapp a la principal es decir a CuidaPets
+from myapp.views import hello
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #"Crear Hello wold" ahora indico que cuando se visite la ruta principal, se ejecute la funcion hello que importé.
+    path('', hello)
+    #"Crear Hello world" Ahora corro el server para ver los cambios (python manage runserver) deberia mostrar "hello world"
 ]
