@@ -58,7 +58,8 @@ ROOT_URLCONF = 'CuidaPets.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        #DECLARO MANUALMENTE DONDE ESTAN LOS TEMPLATES.
+        'DIRS': ['./myapp/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

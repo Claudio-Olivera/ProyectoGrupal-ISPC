@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/cuidadores.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- BOOTSTRAP JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- Favicon -->
+    <link rel="Shortcut icon" href="assets/IMG/favicon.png" type="image/x-icon"/>
+        <title>Cuidadores-CuidaPets</title>
+</head>
+
+<body>
+    <header>
+        <div class="div__header">
+                <h1 class="h1__title display-1">
+                    CuidaPets
+                    <img class="house img-fluid " src="./assets/IMG/house-removebg-preview.png" alt="logotipo de perro y gato dentro de una casa">
+                </h1>
+        </div> 
+    </header>
+
+<!-- INICIO DE NAVBAR -->
+    <div class="set__nav">
+        <nav class="navbar navbar-expand-lg navbar-light nav__bgColor">
+            <div class="container-fluid nav d-flex justify-content-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item nav justify-content-center">
+                        <a class="nav-link active" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item nav justify-content-center">
+                        <a class="nav-link active" href="./sobreNosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item nav justify-content-center">
+                        <a class="nav-link active" href="./contactanos.html">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- FIN DE NAVBAR -->
+
+    <main>
+        <h1 class="h1__cuidadores">Cuidadores</h1>
+        
+
+        <!-- Aca faltaria colocar un buscador con filtros de busqueda para los cuidadores. -->
+
+
+        <h4 class="text-center">Aquí puedes ver todos los cuidadores registrados en la web!!</h4>
+        
+        <section class="card__cuidadores">
+
+            <!--Inicio de cards cuidadores, luego al consumir backend, por cada cuidador se creará automaticamente una nueva (con solo definir una en el html, será suficiente para colocarlas todas)-->
+
+            <!-- primera card -->
+            <div class="d-flex align-items-center justify-content-center espaciador">
+                <div class="card text-center">
+                    <div class="container__img">
+                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                    </div>
+                    <div class="card-body">
+                    <h5 class="card-title fw-bold">Juan Pérez</h5>
+                    <p class="card-text">
+                        Texto donde Juan explicaria brevemente su oferta, con un maximo de carácteres permitidos.
+                    </p>
+                    </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> 
+                        <div class="ratings">
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                    <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-788433</li>
+                    <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> Buenos Aires - Merlo</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Mas info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- segunda card -->
+            <div class="d-flex align-items-center justify-content-center espaciador">
+                <div class="card text-center">
+                    <div class="container__img">
+                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                    </div>
+                    <div class="card-body">
+                    <h5 class="card-title fw-bold">Laura Estive</h5>
+                    <p class="card-text">
+                        Texto donde Laura explicaria brevemente su oferta, con un maximo de carácteres permitidos.
+                    </p>
+                    </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> 
+                        <div class="ratings">
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                        </div>
+                    </li>
+                    <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-788423</li>
+                    <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> Córdoba - Gral.San Martin</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Mas info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- tercera card -->
+            <div class="d-flex align-items-center justify-content-center espaciador">
+                <div class="card text-center">
+                    <div class="container__img">
+                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                    </div>
+                    <div class="card-body">
+                    <h5 class="card-title fw-bold">Patricia Jimenez</h5>
+                    <p class="card-text">
+                        Texto donde Patricia explicaria brevemente su oferta, con un máximo de carácteres permitidos.
+                    </p>
+                    </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> 
+                        <div class="ratings">
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                    <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-787433</li>
+                    <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> C.A.B.A - San Telmo</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Mas info</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- cuarta card -->
+        <div class="d-flex align-items-center justify-content-center espaciador">
+            <div class="card text-center">
+                <div class="container__img">
+                    <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                </div>
+                <div class="card-body">
+                <h5 class="card-title fw-bold">Fernando Segel</h5>
+                <p class="card-text">
+                    Texto donde Fernando explicaria brevemente su oferta, con un maximo de carácteres permitidos.
+                </p>
+                </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> 
+                    <div class="ratings">
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </li>
+                <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-782433</li>
+                <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> Rio Negro - General Roca </li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Mas info</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- quinta card -->
+            <div class="d-flex align-items-center justify-content-center espaciador">
+                <div class="card text-center">
+                    <div class="container__img">
+                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                    </div>
+                    <div class="card-body">
+                    <h5 class="card-title fw-bold">Julieta Valladares</h5>
+                    <p class="card-text">
+                        Texto donde Julieta explicaria brevemente su oferta, con un maximo de carácteres permitidos.
+                    </p>
+                    </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> 
+                        <div class="ratings">
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                        </div>
+                    </li>
+                    <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-771423</li>
+                    <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> Santa Fe - Rosario</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Mas info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- sexta card -->
+            <div class="d-flex align-items-center justify-content-center espaciador">
+                <div class="card text-center">
+                    <div class="container__img">
+                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                    </div>
+                    <div class="card-body">
+                    <h5 class="card-title fw-bold">Maria Acosta</h5>
+                    <p class="card-text">
+                        Texto donde María explicaria brevemente su oferta, con un maximo de carácteres permitidos.
+                    </p>
+                    </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> 
+                        <div class="ratings">
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                    <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-744411</li>
+                    <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> San Luis - Merlo</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Mas info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- septima card -->
+            <div class="d-flex align-items-center justify-content-center espaciador">
+                <div class="card text-center">
+                    <div class="container__img">
+                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                    </div>
+                    <div class="card-body">
+                    <h5 class="card-title fw-bold">Javier Nuñez</h5>
+                    <p class="card-text">
+                        Texto donde Javier explicaria brevemente su oferta, con un maximo de carácteres permitidos.
+                    </p>
+                    </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> 
+                        <div class="ratings">
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star rating-color"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </li>
+                    <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-781233</li>
+                    <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> San Juan - Caucete </li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Mas info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- octava card -->
+        <div class="d-flex align-items-center justify-content-center espaciador">
+            <div class="card text-center">
+                <div class="container__img">
+                    <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                </div>
+                <div class="card-body">
+                <h5 class="card-title fw-bold">Antonella Andrade</h5>
+                <p class="card-text">
+                    Texto donde Antonella explicaria brevemente su oferta, con un maximo de carácteres permitidos.
+                </p>
+                </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> 
+                    <div class="ratings">
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star rating-color"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </li>
+                <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-628413</li>
+                <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> C.A.B.A - Palermo</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Mas info</a>
+            </div>
+        </div>
+    </div>
+    </section>
+    </main>
+
+    <div class="container">
+
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="./faq.html" class="nav-link px-2 text-muted">Preguntas frecuentes</a></li>
+            </ul>
+            <h6 class="text-center">Nuestras redes sociales</h6>
+            <div class="d-flex align-items-center justify-content-center">
+                <li class="ms-3 nav-link"><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="ms-3 nav-link"><a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li class="ms-3 nav-link"><a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            </div>
+            <p class="text-center text-muted">© 2022 Company, Inc</p>
+        </footer>
+        
+    </div>
+    
+</body>
+<!-- Font awesome -->
+<script src="https://kit.fontawesome.com/6dfa6ca8b0.js" crossorigin="anonymous"></script>
+</html>

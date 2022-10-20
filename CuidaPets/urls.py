@@ -23,5 +23,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #Ahora uso include para poder usar en el principal myapp.urls y se deberia mostrar lo mismo que antes cuando lo declaraba directamente aqui.
     path('', include('myapp.urls'))
-
 ]
