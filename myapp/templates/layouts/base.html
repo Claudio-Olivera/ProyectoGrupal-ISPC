@@ -31,7 +31,13 @@
         </nav>
     </div>
     <!-- FIN DE NAVBAR -->
-    
+
+    <!-- Aplico include de jinja 2 para que el modal de iniciar Sesion se comparta en todas las navegaciones -->
+    {% include 'layouts/modalIniciarSesion.html' %}
+
+    <!-- Aplico include de jinja 2 para que el modal de Registrarse se comparta en todas las navegaciones -->
+    {% include 'layouts/modalRegistrarse.html' %}
+
     <!-- Uso de jinja para navegacion--> 
     {% block content %}
     {% endblock %}

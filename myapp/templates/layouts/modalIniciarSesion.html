@@ -1,0 +1,44 @@
+<!--Inicio Modal de iniciar Sesion -->
+<div class="modal fade" id="IniciarSesionModal" tabindex="-1" aria-labelledby="sesionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sesionModalLabel">Iniciar Sesión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="Email">Email<span class="text-danger">*</span></label>
+                    <input type="email" name="email" class="form-control" id="Email" placeholder="ingresa tu Email">
+                </div>
+                <div class="mb-3">
+                    <label for="Contraseña">Contraseña<span class="text-danger">*</span></label>
+                    <input type="password" name="contraseña" class="form-control" id="Contraseña"
+                        placeholder="Ingresa tu Contraseña">
+                </div>
+                <div class="mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                    <label class="form-check-label" for="remember">Recordarme</label>
+                    <a href="#" class="float-end">Olvidé mi contraseña</a>
+                </div>
+            </div>
+            <div class="modal-footer pt-4">
+                <button type="button" class="btn btn-success mx-auto w-100">Iniciar
+                    Sesión</button>
+            </div>
+            <p class="text-center">No tienes cuenta? crea una aquí:
+                <a href="" data-bs-target="#RegistrateModal" data-bs-toggle="modal" data-bs-dismiss="modal"
+                    title="registrate">
+                    <button type="button" id="btn__register" class="btn text-white mx-auto w-25">
+                        Registro
+                    </button>
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Fin Modal de iniciar Sesion -->
+<!-- Uso de jinja --> 
+{% block content %}
+{% endblock %}
+<!-- con esto termino el bloque -->

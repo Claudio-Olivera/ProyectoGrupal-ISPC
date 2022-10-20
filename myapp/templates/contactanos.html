@@ -29,8 +29,8 @@
         </div> 
     </header>
 
-    <!-- Uso de jinja (similar a las interpolaciones en angular) para navegacion--> 
-    {% extends 'base.html' %}
+    <!-- Uso de jinja (similar a las interpolaciones en angular) para navegacion y modales --> 
+    {% extends 'layouts/base.html' %}
 
     <!-- tengo que declarar el bloque que continua despues del extends de jinja -->
     {% block content %}
@@ -60,22 +60,8 @@
 
 <div class="container">
 
-    <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <!-- href con espacio vacio primero y despues / para que vaya a inicio. no toma /index y menos /index.html por la definicion que fue echa en urls.py -->
-            <li class="nav-item"><a href=" /" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="/faq" class="nav-link px-2 text-muted">Preguntas frecuentes</a></li>
-        </ul>
-        <h6 class="text-center">Nuestras redes sociales</h6>
-        <div class="d-flex align-items-center justify-content-center">
-            <li class="ms-3 nav-link"><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-            <li class="ms-3 nav-link"><a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-            <li class="ms-3 nav-link"><a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-        </div>
-        <p class="text-center text-muted">© 2022 Company, Inc</p>
-    </footer>
-    
-</div>
+    <!-- Incluyo el footer usando jinja2 -->
+    {% include 'layouts/footer.html' %}
 
 </body>
 
