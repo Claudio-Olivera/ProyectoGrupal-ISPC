@@ -18,8 +18,8 @@
 - Ejecuto el proyecto con : python manage.py runserver (puedo indicar el puerto en el que quiero que se ejecute con: python manage.py runserver 3000 , ya que por defecto lo hace en el puerto 8000)
 - Me dice que hay migraciones sin ser aplicadas.
 - Me crea un archivo db.sqlite3 que es la Database que usa django en desarrollo.
-- Ctrl+click en http://127.0.0.1:8000/ y deria mostrarse la web de django inicial de nuestro proyecto.
-
+- Ctrl+click en http://127.0.0.1:8000/ y deria mostrarse la web de django inicial de nuestro proyecto.(Con Ctrl + c detengo el servidor.)
+- Creación de un proyecto nuevo con el comando : python manage.py startapp myapp (En este caso myapp es nombre de ejemplo, puedo crear cuantos proyectos necesite, los mismos estarán acoplados al proyecto principal (se llama a los archivos desde el proyecto principal),que en este caso es CuidaPets) Muy parecido al concepto de componentes en Angular.
 
 
 
