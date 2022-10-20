@@ -1,40 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/cuidadores.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- BOOTSTRAP CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <!-- BOOTSTRAP JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <!-- Favicon -->
-    <link rel="Shortcut icon" href="assets/IMG/favicon.png" type="image/x-icon"/>
-        <title>Cuidadores-CuidaPets</title>
-</head>
-
+{% block content %}
+    {% include 'layouts/base.html' %}
 <body>
-    <header>
-        <div class="div__header">
-                <h1 class="h1__title display-1">
-                    CuidaPets
-                    <img class="house img-fluid " src="./assets/IMG/house-removebg-preview.png" alt="logotipo de perro y gato dentro de una casa">
-                </h1>
-        </div> 
-    </header>
-
-    <!-- Uso de jinja para navegacion--> 
-    {% extends 'layouts/base.html' %}
-
-    <!-- tengo que declarar el bloque que continua despues del extends de jinja -->
-    {% block content %}
+    <!-- Uso de jinja para colocar header en cuidadores -->
+    {% include 'layouts/header.html' %}
+    <!-- Uso de jinja para colocar navbar en cuidadores -->
+    {% include 'layouts/navbar.html' %}
+<!-- Realizo la carga de estaticos por jinja -->
+    {% load static %}
 
     <main>
         <h1 class="h1__cuidadores">Cuidadores</h1>
@@ -53,7 +25,7 @@
             <div class="d-flex align-items-center justify-content-center espaciador">
                 <div class="card text-center">
                     <div class="container__img">
-                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                        <img src="{% static 'assets/300x200img.png' %}" alt="imagen representativa y promocional de cuidador" />
                     </div>
                     <div class="card-body">
                     <h5 class="card-title fw-bold">Juan Pérez</h5>
@@ -84,7 +56,7 @@
             <div class="d-flex align-items-center justify-content-center espaciador">
                 <div class="card text-center">
                     <div class="container__img">
-                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                        <img src="{% static 'assets/300x200img.png' %}" alt="imagen representativa y promocional de cuidador" />
                     </div>
                     <div class="card-body">
                     <h5 class="card-title fw-bold">Laura Estive</h5>
@@ -115,7 +87,7 @@
             <div class="d-flex align-items-center justify-content-center espaciador">
                 <div class="card text-center">
                     <div class="container__img">
-                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                        <img src="{% static 'assets/300x200img.png' %}" alt="imagen representativa y promocional de cuidador" />
                     </div>
                     <div class="card-body">
                     <h5 class="card-title fw-bold">Patricia Jimenez</h5>
@@ -147,7 +119,7 @@
         <div class="d-flex align-items-center justify-content-center espaciador">
             <div class="card text-center">
                 <div class="container__img">
-                    <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                    <img src="{% static 'assets/300x200img.png' %}" alt="imagen representativa y promocional de cuidador" />
                 </div>
                 <div class="card-body">
                 <h5 class="card-title fw-bold">Fernando Segel</h5>
@@ -178,7 +150,7 @@
             <div class="d-flex align-items-center justify-content-center espaciador">
                 <div class="card text-center">
                     <div class="container__img">
-                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                        <img src="{% static 'assets/300x200img.png' %}" alt="imagen representativa y promocional de cuidador" />
                     </div>
                     <div class="card-body">
                     <h5 class="card-title fw-bold">Julieta Valladares</h5>
@@ -209,7 +181,7 @@
             <div class="d-flex align-items-center justify-content-center espaciador">
                 <div class="card text-center">
                     <div class="container__img">
-                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                        <img src="{% static 'assets/300x200img.png' %}" alt="imagen representativa y promocional de cuidador" />
                     </div>
                     <div class="card-body">
                     <h5 class="card-title fw-bold">Maria Acosta</h5>
@@ -240,7 +212,7 @@
             <div class="d-flex align-items-center justify-content-center espaciador">
                 <div class="card text-center">
                     <div class="container__img">
-                        <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                        <img src="{% static 'assets/300x200img.png' %}" alt="imagen representativa y promocional de cuidador" />
                     </div>
                     <div class="card-body">
                     <h5 class="card-title fw-bold">Javier Nuñez</h5>
@@ -271,7 +243,7 @@
         <div class="d-flex align-items-center justify-content-center espaciador">
             <div class="card text-center">
                 <div class="container__img">
-                    <img src="./assets/IMG/300x200img.png" alt="imagen representativa y promocional de cuidador" />
+                    <img src="{% static 'assets/300x200img.png' %}" alt="imagen representativa y promocional de cuidador" />
                 </div>
                 <div class="card-body">
                 <h5 class="card-title fw-bold">Antonella Andrade</h5>

@@ -1,45 +1,28 @@
-    <!-- INICIO DE NAVBAR -->
-    <div class="set__nav">
-        <nav class="navbar navbar-expand-lg navbar-light nav__bgColor">
-            <div class="container-fluid nav d-flex justify-content-end">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item nav justify-content-center">
-                            <!-- Agregadas jinja url llama por name dado en archivo urls.py -->
-                            <a class="nav-link active" href="{% url 'index' %}">Home</a>
-                        </li>
-                        <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" href="{% url 'sobreNosotros' %}">Sobre Nosotros</a>
-                        </li>
-                        <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" href="{% url 'cuidadores' %}">Cuidadores</a>
-                        </li>
-                        <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" href="{% url 'contactanos' %}">Contáctanos</a>
-                        </li>
-                        <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" href="" data-bs-target="#IniciarSesionModal"
-                                data-bs-toggle="modal" title="Iniciar Sesión"><i class="fa-regular fa-user h4"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- FIN DE NAVBAR -->
-
-    <!-- Aplico include de jinja 2 para que el modal de iniciar Sesion se comparta en todas las navegaciones -->
-    {% include 'layouts/modalIniciarSesion.html' %}
-
-    <!-- Aplico include de jinja 2 para que el modal de Registrarse se comparta en todas las navegaciones -->
-    {% include 'layouts/modalRegistrarse.html' %}
-
-    <!-- Uso de jinja para navegacion--> 
-    {% block content %}
-    {% endblock %}
-    <!-- con esto termino el bloque -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/contactanos.css' %}">
+    <link rel="stylesheet" href="{% static '/css/cuidadores.css' %}">
+    <link rel="stylesheet" href="{% static '/css/faq.css' %}">
+    <link rel="stylesheet" href="{% static '/css/sobreNosotros.css' %}">
+    <!-- BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- BOOTSTRAP JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- Favicon -->
+    <link rel="Shortcut icon" href="../static/assets/favicon.png" type="image/x-icon"/>
+        <title>CuidaPets</title>
+</head>
+<!-- Uso de jinja para navegacion--> 
+{% block content %}
+{% endblock %}
+<!-- con esto termino el bloque -->

@@ -1,40 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/contactanos.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- BOOTSTRAP CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- BOOTSTRAP JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <!-- Favicon -->
-    <link rel="Shortcut icon" href="assets/IMG/favicon.png" type="image/x-icon"/>
-</head>
-
+{% block content %}
+    {% include 'layouts/base.html' %}
 <body>
-    <header>
-        <div class="div__header">
-                <h1 class="h1__title display-1">
-                    CuidaPets
-                    <img class="house img-fluid " src="./assets/IMG/house-removebg-preview.png" alt="logotipo de perro y gato dentro de una casa">
-                </h1>
-        </div> 
-    </header>
-
-    <!-- Uso de jinja (similar a las interpolaciones en angular) para navegacion y modales --> 
-    {% extends 'layouts/base.html' %}
-
-    <!-- tengo que declarar el bloque que continua despues del extends de jinja -->
-    {% block content %}
-
+    <!-- Uso de jinja para colocar header en contactanos -->
+    {% include 'layouts/header.html' %}
+    <!-- Uso de jinja para colocar navbar en contactanos -->
+    {% include 'layouts/navbar.html' %}
+<!-- Realizo la carga de estaticos por jinja -->
+    {% load static %}
     <main>
         <h1 class="h1__contactanos">Contáctanos</h1>
         <div class="container py-4">
