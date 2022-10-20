@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Declaro la app que cree
+    'myapp'
 ]
 
 MIDDLEWARE = [
@@ -58,8 +60,7 @@ ROOT_URLCONF = 'CuidaPets.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        #DECLARO MANUALMENTE DONDE ESTAN LOS TEMPLATES.
-        'DIRS': ['./myapp/templates/'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

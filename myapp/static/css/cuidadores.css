@@ -1,0 +1,47 @@
+@import url("style.css");
+
+.h1__cuidadores{
+    margin-top: 2%;
+    text-align: center;
+}
+
+.card__cuidadores{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+.espaciador{    
+    margin:1rem;
+}
+
+.card{
+    width: 18rem;
+    z-index: 1;
+    background-color: var(--lavender) !important;
+}
+
+.container__img{
+    justify-content: center;
+    align-items: center;
+    margin: 1.5% 0% 1.5% 0%;
+}
+
+.ratings i{
+    color:#cecece;
+    font-size:20px;
+}
+
+.rating-color{
+    color:#fbc634 !important;
+}
+
+.list-group-item{
+    background-color: var(--violetFluorReduced) !important;
+    color: white !important;
+    font-weight: bold;
+}
