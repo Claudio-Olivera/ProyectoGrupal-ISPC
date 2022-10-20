@@ -6,6 +6,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 def hello(request):
     return HttpResponse ("<h1>Hello World</h1>")
-#Ahora necesito dirigirme a CuidaPets(que es el principal) e indicar en el archivo urls.py en la seccion urlpatterns la funcion "hello" que acabo de crear 
+
 
 

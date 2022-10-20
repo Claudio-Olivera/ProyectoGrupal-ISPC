@@ -14,15 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+#Ahora sumo el import de include para poder usar lo que tengo en views.py de "myapp"
+from django.urls import path, include
 # Aqui se especifican las rutas que se pueden visitar.
 
-#"Crear hello world" ahora importo la funcion hello desde myapp a la principal es decir a CuidaPets
-from myapp.views import hello
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #"Crear Hello wold" ahora indico que cuando se visite la ruta principal, se ejecute la funcion hello que importé.
-    path('', hello)
-    #"Crear Hello world" Ahora corro el server para ver los cambios (python manage runserver) deberia mostrar "hello world"
+    #Ahora uso include para poder usar en el principal myapp.urls y se deberia mostrar lo mismo que antes cuando lo declaraba directamente aqui.
+    path('', include('myapp.urls'))
+
 ]
