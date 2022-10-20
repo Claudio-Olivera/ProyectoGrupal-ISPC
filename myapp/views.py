@@ -13,5 +13,3 @@ def contactanos(request):
     return render (request, 'contactanos.html')
 
 
-
-
