@@ -1,14 +1,15 @@
+<!-- inicia el block -->
 {% block content %}
+    <!-- Uso de jinja para colocar base en index -->
 {% include 'layouts/base.html' %}
 <body>
     <!-- Uso de jinja para colocar header en index -->
     {% include 'layouts/header.html' %}
     <!-- Uso de jinja para colocar navbar en index -->
     {% include 'layouts/navbar.html' %}
-<!-- Realizo la carga de estaticos por jinja -->
+    <!-- Realizo la carga de estaticos por jinja -->
     {% load static %}
     <main>
-        <!-- Cambio, pasar seccion experiencias de usuario a main en home para utilizar todo el home como contenido promocional -->
         <div class="width__sections">
             <section class="section">
                 <h2 class="section__title text-center">Necesitas que alguien cuide tu mascota?</h2><br>
@@ -24,7 +25,6 @@
                         contratado.</li>
                 </ul>
                 </p>
-                <!-- aca posible imagen , video , etc -->
             </section>
 
 
@@ -45,7 +45,6 @@
                     <li>No es necesario llamar a amigos/familiares/vecinos no capacitados o no dispuestos.</li>
                 </ul>
                 </p>
-                <!-- aca posible imagen , video , etc -->
             </section>
 
 
@@ -78,7 +77,6 @@
                 </ul>
 
                 </p>
-                <!-- aca posible imagen , video , etc -->
             </section>
         </div>
 
@@ -109,9 +107,9 @@
 
     </main>
 
-    <!-- Incluyo el footer usando jinja2 -->
+    <!-- Uso de jinja para colocar footer en index -->
     {% include 'layouts/footer.html' %}
 
 </body>
-
+<!-- fin del block -->
 {% endblock %}

@@ -1,11 +1,13 @@
+<!-- inicia el block -->
 {% block content %}
+    <!-- Uso de jinja para colocar base en faq -->
     {% include 'layouts/base.html' %}
 <body>
     <!-- Uso de jinja para colocar header en faq -->
     {% include 'layouts/header.html' %}
     <!-- Uso de jinja para colocar navbar en faq -->
     {% include 'layouts/navbar.html' %}
-<!-- Realizo la carga de estaticos por jinja -->
+    <!-- Realizo la carga de estaticos por jinja -->
     {% load static %}
     <main>
 
@@ -107,9 +109,9 @@
             </section>
     </main>
     
-    <!-- Incluyo el footer usando jinja2 -->
+    <!-- Uso de jinja para colocar footer en faq -->
     {% include 'layouts/footer.html' %}
 
 </body>
-
+<!-- fin del block -->
 {% endblock %}
