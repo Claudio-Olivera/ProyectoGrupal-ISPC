@@ -2,9 +2,8 @@
 <div class="set__nav">
     <nav class="navbar navbar-expand-lg navbar-light nav__bgColor">
         <div class="container-fluid nav d-flex justify-content-end">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
@@ -23,8 +22,8 @@
                         <a class="nav-link active" href="{% url 'contactanos' %}">Contáctanos</a>
                     </li>
                     <li class="nav-item nav justify-content-center">
-                        <a class="nav-link active" href="" data-bs-target="#IniciarSesionModal"
-                            data-bs-toggle="modal" title="Iniciar Sesión"><i class="fa-regular fa-user h4"></i></a>
+                        <a class="nav-link active" href="" data-bs-target="#IniciarSesionModal" data-bs-toggle="modal"
+                            title="Iniciar Sesión"><i class="fa-regular fa-user h4"></i></a>
                     </li>
                 </ul>
             </div>
@@ -33,13 +32,12 @@
 </div>
 <!-- FIN DE NAVBAR -->
 
-<!-- Aplico include de jinja 2 para que el modal de iniciar Sesion se comparta en todas las navegaciones -->
+<!-- Aplico include de jinja para que el modal de iniciar Sesion se comparta en todas las navegaciones -->
 {% include 'layouts/modalIniciarSesion.html' %}
 
-<!-- Aplico include de jinja 2 para que el modal de Registrarse se comparta en todas las navegaciones -->
+<!-- Aplico include de jinja para que el modal de Registrarse se comparta en todas las navegaciones -->
 {% include 'layouts/modalRegistrarse.html' %}
 
-<!-- Uso de jinja para navegacion--> 
 {% block content %}
 {% endblock %}
 <!-- con esto termino el bloque -->

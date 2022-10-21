@@ -1,14 +1,14 @@
+<!-- realizo carga de estaticos para los links -->
+{% load static %}
 <header>
     <div class="div__header">
         <h1 class="h1__title display-1">
             CuidaPets
-            {% load static %}
             <img class="house img-fluid " src="{% static 'assets/house-removebg-preview.png' %}"
             alt="logotipo de perro y gato dentro de una casa">
         </h1>
     </div>
 </header>
-<!-- Uso de jinja (similar a las interpolaciones en angular) para navegacion y modales--> 
 
 {% block content %}
 {% endblock %}
