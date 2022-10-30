@@ -7,7 +7,7 @@ try:
                                         password='rionegri12')
 
 
-#Claudio Olivera: -El password de la tabla user esta como varchar, pero se puede pasar a binary y guardarla despues de sufrir una encriptacion, como por ejemplo con sha-256
+#Claudio Olivera: -Esta tabla User_Card es para que el usuario pueda guardar la información de su tarjeta de cuidador.
 
     mySql_Create_Table_Query = """CREATE TABLE User_card ( 
                             Id_User_card int(11) NOT NULL,

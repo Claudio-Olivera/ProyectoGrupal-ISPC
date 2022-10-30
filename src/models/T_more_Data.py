@@ -7,7 +7,7 @@ try:
                                         password='rionegri12')
 
 
-#Claudio Olivera: -El password de la tabla user esta como varchar, pero se puede pasar a binary y guardarla despues de sufrir una encriptacion, como por ejemplo con sha-256
+#Claudio Olivera: -Esta tabla more_Data es para que el usuario cargue datos adicionales despues de su primer registro en la tabla User.
 
     mySql_Create_Table_Query = """CREATE TABLE more_Data ( 
                             Id_more_Data int(11) NOT NULL,
