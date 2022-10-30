@@ -18,10 +18,10 @@ try:
 
     cursor = connection.cursor()
     result = cursor.execute(mySql_Create_Table_Query)
-    print("tabla de contacto creada con exito!! ")
+    print("tabla de Contacto creada con exito!! ")
 
 except mysql.connector.Error as error:
-    print("Fallo al crear tabla contacto en MySQL: {}".format(error))
+    print("Fallo al crear tabla Contacto en MySQL: {}".format(error))
 finally:
     if connection.is_connected():
         cursor.close()

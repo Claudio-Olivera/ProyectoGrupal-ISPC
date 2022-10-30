@@ -7,7 +7,7 @@ try:
                                         password='rionegri12')
 
 #Claudio Olivera: -Esta tabla Admin contendrá los datos del administrador del sistema.
-# -El password de la tabla User esta como varchar, pero se puede pasar a binary y guardarla despues de sufrir una encriptacion, como por ejemplo con sha-256.
+# -El password de la tabla Admin esta como varchar, pero se puede pasar a binary y guardarla despues de sufrir una encriptacion, como por ejemplo con sha-256.
 
     mySql_Create_Table_Query = """CREATE TABLE Admin ( 
                             Id_Admin int(11) NOT NULL AUTO_INCREMENT,
