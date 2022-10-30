@@ -30,7 +30,7 @@ try:
     print("tabla de more_Data creada con exito!! ")
 
 except mysql.connector.Error as error:
-    print("Fallo al crear tabla en MySQL: {}".format(error))
+    print("Fallo al crear tabla more_Data en MySQL: {}".format(error))
 finally:
     if connection.is_connected():
         cursor.close()

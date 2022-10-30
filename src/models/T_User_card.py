@@ -21,10 +21,10 @@ try:
 
     cursor = connection.cursor()
     result = cursor.execute(mySql_Create_Table_Query)
-    print("tabla de more_Data creada con exito!! ")
+    print("tabla de user_card creada con exito!! ")
 
 except mysql.connector.Error as error:
-    print("Fallo al crear tabla en MySQL: {}".format(error))
+    print("Fallo al crear tabla user_card en MySQL: {}".format(error))
 finally:
     if connection.is_connected():
         cursor.close()

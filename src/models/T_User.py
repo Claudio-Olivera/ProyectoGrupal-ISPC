@@ -22,7 +22,7 @@ try:
     print("tabla de usuario creada con exito!! ")
 
 except mysql.connector.Error as error:
-    print("Fallo al crear tabla en MySQL: {}".format(error))
+    print("Fallo al crear tabla usuario en MySQL: {}".format(error))
 finally:
     if connection.is_connected():
         cursor.close()
