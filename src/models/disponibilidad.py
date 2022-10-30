@@ -1,1 +1,0 @@
-#(pensar en el turnero de un medico, equivalente a eso)
