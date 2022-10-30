@@ -18,9 +18,10 @@ try:
                             Piso_Depto varchar(30),
                             Ciudad varchar(30) NOT NULL,
                             Provincia varchar(30) NOT NULL,
+                            Telefono varchar(20) NOT NULL,
                             Id_user int(11) NOT NULL,
-                            CONSTRAINT FK_moreData_TO_User FOREIGN KEY (Id_user) REFERENCES User(Id_User)
-                                ON UPDATE RESTRICT ON DELETE CASCADE,
+                            CONSTRAINT FK_moreData_TO_User FOREIGN KEY (Id_user) REFERENCES User(Id_User) 
+                            ON UPDATE RESTRICT ON DELETE CASCADE,
                             PRIMARY KEY (Id_more_Data)) """
 
     cursor = connection.cursor()
