@@ -8,6 +8,7 @@ try:
 
 
 #Claudio Olivera: -Esta tabla more_Data es para que el usuario cargue datos adicionales despues de su primer registro en la tabla User.
+# Tiene una relacion 1 a 1 con la tabla User (revisar si lo hice bien)
 
     mySql_Create_Table_Query = """CREATE TABLE more_Data ( 
                             Id_more_Data int(11) NOT NULL,
