@@ -21,7 +21,7 @@ try:
 
     cursor = connection.cursor()
     result = cursor.execute(mySql_Create_Table_Query)
-    print("tabla de user_card creada con exito!! ")
+    print("tabla de user_card creada con exito!!")
 
 except mysql.connector.Error as error:
     print("Fallo al crear tabla user_card en MySQL: {}".format(error))
