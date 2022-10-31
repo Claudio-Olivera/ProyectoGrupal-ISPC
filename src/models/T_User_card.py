@@ -11,7 +11,7 @@ try:
 # Tiene una relacion 1 a 1 con la tabla more_Data (revisar si lo hice bien).
 
     mySql_Create_Table_Query = """CREATE TABLE user_Card ( 
-                            Id_user_Card int(11) NOT NULL,
+                            Id_user_Card int(11) NOT NULL AUTO_INCREMENT,
                             Mascotas varchar(50) NOT NULL, 
                             Presentacion varchar(250) NOT NULL,
                             Imagen varchar(100) NOT NULL,

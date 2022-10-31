@@ -11,7 +11,7 @@ try:
 # Tiene una relacion 1 a 1 con la tabla User (revisar si lo hice bien)
 
     mySql_Create_Table_Query = """CREATE TABLE more_Data ( 
-                            Id_more_Data int(11) NOT NULL,
+                            Id_more_Data int(11) NOT NULL AUTO_INCREMENT,
                             Name varchar(20) NOT NULL,
                             LastName varchar(50) NOT NULL,
                             Calle varchar(30) NOT NULL,
