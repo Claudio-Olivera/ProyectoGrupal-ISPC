@@ -13,7 +13,8 @@ try:
                             Id_list_Users int(11),
                             Id_list_Admins int(11),
                             CONSTRAINT FK_list_Users_TO_Admin FOREIGN KEY (Id_list_Admins) REFERENCES Admin(Id_Admin),
-                            CONSTRAINT FK_list_Users_TO_User FOREIGN KEY (Id_list_Users) REFERENCES User(Id_User))"""
+                            CONSTRAINT FK_list_Users_TO_User FOREIGN KEY (Id_list_Users) REFERENCES User(Id_User))
+                            """
 
     cursor = connection.cursor()
     result = cursor.execute(mySql_Create_Table_Query)

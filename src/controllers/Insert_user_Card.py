@@ -10,7 +10,7 @@ try:
         mySql_insert_query = """INSERT INTO user_card ( Mascotas, Presentacion, Imagen,Id_more_Data) 
                                 VALUES (%s,%s,%s,%s) """
 #Tener en cuenta que le estoy pasando el Id_more_Data para que haga la relacion entre tablas fijarse como hacer para que ingrese automaticamente el Id_more_Data del user que este logueado.
-        record = ('Perros, Gatos, Hamsters', 'Me encantan los animales, paseo perros, doy medicamentos ', '/images/laura.jpg',1)
+        record = ('Perros, Gatos, Hamsters', 'Me encantan los animales, paseo perros, doy medicamentos ', '/images/laura.jpg',3)
         cursor.execute(mySql_insert_query, record)
         connection.commit()
         print("Record inserted successfully into products table")

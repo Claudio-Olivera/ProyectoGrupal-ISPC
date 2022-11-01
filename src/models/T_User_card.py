@@ -16,7 +16,8 @@ try:
                             Presentacion varchar(250) NOT NULL,
                             Imagen varchar(100) NOT NULL,
                             Id_more_Data int(11) NOT NULL,
-                            CONSTRAINT FK_Card_TO_more_Data FOREIGN KEY (Id_more_Data) REFERENCES more_Data(Id_more_Data),
+                            CONSTRAINT FK_Card_TO_more_Data FOREIGN KEY (Id_more_Data) REFERENCES more_Data(Id_more_Data)
+                            ON UPDATE RESTRICT ON DELETE CASCADE,
                             PRIMARY KEY (Id_user_Card)) """
 
     cursor = connection.cursor()

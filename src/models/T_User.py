@@ -15,7 +15,8 @@ try:
                             User varchar(20) NOT NULL UNIQUE,
                             Email varchar(100) NOT NULL UNIQUE,
                             Password varchar(30) NOT NULL,
-                            PRIMARY KEY (Id_User)) """
+                            PRIMARY KEY (Id_User)) 
+                            """
 
     cursor = connection.cursor()
     result = cursor.execute(mySql_Create_Table_Query)
