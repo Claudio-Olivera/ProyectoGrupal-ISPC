@@ -12,7 +12,7 @@ try:
         mySql_insert_query = """INSERT INTO list_users (Id_list_Users, Id_list_Admins) 
                                 VALUES (%s,%s) """
 
-        record = (1,1)
+        record = (3,2)
         cursor.execute(mySql_insert_query, record)
         connection.commit()
         print("Record inserted successfully into products table")

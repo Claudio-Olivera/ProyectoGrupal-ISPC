@@ -10,7 +10,7 @@ try:
         mySql_insert_query = """INSERT INTO more_data ( Name, LastName, Calle, Direccion, Piso_Depto, Ciudad, Provincia, Telefono, Id_User ) 
                                 VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s) """
 #Tener en cuenta que le estoy pasando el Id_User para que haga la relacion entre tablas fijarse como hacer para que ingrese automaticamente el Id_User del user que este logueado.
-        record = ('Laura', 'Robledo', 'Alsina', '413','','General Roca','Rio Negro', '2984788455',2)
+        record = ('Laura', 'Robledo', 'Alsina', '413','','General Roca','Rio Negro', '2984788455',3)
         cursor.execute(mySql_insert_query, record)
         connection.commit()
         print("Record inserted successfully into products table")
