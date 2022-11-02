@@ -17,7 +17,7 @@ def delete_all_user_data(id):
         print(cursor.rowcount, "registro(s) borrado") 
 
     except mysql.connector.Error as error:
-        print("Failed to delete record into MySQL table {}".format(error))
+        print("Failed to delete user into User table {}".format(error))
 
     finally:
         if connection.is_connected():

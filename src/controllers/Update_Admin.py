@@ -17,7 +17,7 @@ def update_admin_data(username,email,password,Id_admin):
         print(cursor.rowcount, "registro(s) actualizado") 
 
     except mysql.connector.Error as error:
-        print("Failed to delete record into MySQL table {}".format(error))
+        print("Failed to update data into Admin table {}".format(error))
 
     finally:
         if connection.is_connected():

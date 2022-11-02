@@ -1,4 +1,5 @@
 import mysql.connector
+
 def update_user(User, Email, Password, id_User):
     try:
         connection = mysql.connector.connect(host='localhost',
@@ -16,7 +17,7 @@ def update_user(User, Email, Password, id_User):
         print(cursor.rowcount, "registro(s) actualizado") 
 
     except mysql.connector.Error as error:
-        print("Failed to update record into User table {}".format(error))
+        print("Failed to update data into User table {}".format(error))
 
     finally:
         if connection.is_connected():

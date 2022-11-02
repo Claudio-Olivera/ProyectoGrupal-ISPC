@@ -23,7 +23,7 @@ def get_complete_user_data(id):
         cursor.close()
 
     except mysql.connector.Error as error:
-        print("Failed to select all data related to user table {}".format(error))
+        print("Failed to select all data related to User table {}".format(error))
 
     finally:
         if connection.is_connected():

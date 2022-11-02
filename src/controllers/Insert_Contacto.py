@@ -18,7 +18,7 @@ def insert_contacto(name, email, message):
                 print("Record inserted successfully into Contacto table")
 
         except mysql.connector.Error as error:
-                print("Failed to insert into MySQL table {}".format(error))
+                print("Failed to insert new data into Contacto table {}".format(error))
 
         finally:
                 if connection.is_connected():

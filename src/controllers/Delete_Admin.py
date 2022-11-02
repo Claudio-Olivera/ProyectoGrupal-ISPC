@@ -18,7 +18,7 @@ def delete_admin(id):
         print(cursor.rowcount, "registro(s) borrado") 
 
     except mysql.connector.Error as error:
-        print("Failed to delete record into MySQL table {}".format(error))
+        print("Failed to delete admin into Admin table {}".format(error))
 
     finally:
         if connection.is_connected():

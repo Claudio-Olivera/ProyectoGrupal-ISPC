@@ -1,4 +1,5 @@
 import mysql.connector
+
 def update_user_card(mascotas,presentacion,Imagen,id_user_Card):
     try:
         connection = mysql.connector.connect(host='localhost',
@@ -15,7 +16,7 @@ def update_user_card(mascotas,presentacion,Imagen,id_user_Card):
         print(cursor.rowcount, "registro(s) actualizado") 
 
     except mysql.connector.Error as error:
-        print("Failed to update record into user_Card table {}".format(error))
+        print("Failed to update data into user_Card table {}".format(error))
 
     finally:
         if connection.is_connected():

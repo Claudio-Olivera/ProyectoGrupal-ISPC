@@ -13,10 +13,10 @@ def insert_more_data(name, lastName, calle, direccion, piso_Depto, ciudad, provi
                 record = (name, lastName, calle, direccion, piso_Depto, ciudad, provincia, telefono, id_User)
                 cursor.execute(mySql_insert_query, record)
                 connection.commit()
-                print("Record inserted successfully into products table")
+                print("Record inserted successfully into more_Data table")
 
         except mysql.connector.Error as error:
-                print("Failed to insert into MySQL table {}".format(error))
+                print("Failed to insert data into more_Data table {}".format(error))
 
         finally:
                 if connection.is_connected():

@@ -17,7 +17,7 @@ def delete_user_card(id):
         print(cursor.rowcount, "registro(s) borrado") 
 
     except mysql.connector.Error as error:
-        print("Failed to delete record into MySQL table {}".format(error))
+        print("Failed to delete card into user_Card table {}".format(error))
 
     finally:
         if connection.is_connected():
