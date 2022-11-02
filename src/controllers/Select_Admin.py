@@ -20,7 +20,7 @@ try:
     cursor.close()
 
 except mysql.connector.Error as error:
-    print("Failed to insert record into Laptop table {}".format(error))
+    print("Failed to select from admin table. {}".format(error))
 
 finally:
     if connection.is_connected():

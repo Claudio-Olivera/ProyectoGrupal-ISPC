@@ -1,29 +1,33 @@
 import mysql.connector
 
-try:
-    connection = mysql.connector.connect(host='localhost',
+def get_complete_user_data(id):
+    try:
+        connection = mysql.connector.connect(host='localhost',
                                         database='new_schema',
                                         user='root',
                                         password='rionegri12')
 
-    #esta consulta devuelve todos los datos de user y le suma los datos de user_card y more_data, esta forma obtengo en 1 consulta todos los datos relacionados a user.
+    #Esta consulta devuelve todos los datos de user y con los datos de user_card y more_data,de esta forma obtengo en 1 consulta todos los datos relacionados a user.
+    # Hay que pasarle el id_user que quiero consultar.
 
-    mySql_query = "select*from user inner JOIN (more_data, user_Card) on user_card.Id_user_Card = more_data.Id_more_Data;"
+        mySql_query = "select*from user inner JOIN (more_data, user_Card) on user_card.Id_user_Card = more_data.Id_more_Data WHERE user.id_user = %s;"
 
+        record=(id)
+        cursor = connection.cursor()
+        cursor.execute(mySql_query, record)
 
-    cursor = connection.cursor()
-    cursor.execute(mySql_query)
+        rows = cursor.fetchall()
+        for row in rows:
+            print(row)
 
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+        cursor.close()
 
-    cursor.close()
+    except mysql.connector.Error as error:
+        print("Failed to select all data related to user table {}".format(error))
 
-except mysql.connector.Error as error:
-    print("Failed to insert record into Laptop table {}".format(error))
+    finally:
+        if connection.is_connected():
+            connection.close()
+            print("MySQL connection is closed")
 
-finally:
-    if connection.is_connected():
-        connection.close()
-        print("MySQL connection is closed")
+get_complete_user_data([1])
