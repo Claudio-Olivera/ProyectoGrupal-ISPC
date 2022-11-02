@@ -10,7 +10,7 @@ try:
 # -El password de la tabla Admin esta como varchar, pero se puede pasar a binary y guardarla despues de sufrir una encriptacion, como por ejemplo con sha-256.
 
     mySql_Create_Table_Query = """CREATE TABLE Admin ( 
-                            Id_Admin int(11) NOT NULL AUTO_INCREMENT,
+                            Id_Admin int(11) NOT NULL UNIQUE,
                             Username varchar(20) NOT NULL UNIQUE,
                             Email varchar(100) NOT NULL UNIQUE,
                             Password varchar(30) NOT NULL,

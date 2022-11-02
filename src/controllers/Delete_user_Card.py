@@ -25,4 +25,4 @@ def delete_user_card(id):
             connection.close()
             print("MySQL connection is closed")
 
-delete_user_card([3])
+#delete_user_card([3])

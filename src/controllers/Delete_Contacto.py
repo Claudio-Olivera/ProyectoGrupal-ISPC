@@ -26,4 +26,3 @@ def delete_contacto(id):
             connection.close()
             print("MySQL connection is closed")
 
-delete_contacto([2])

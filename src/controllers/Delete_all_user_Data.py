@@ -25,4 +25,4 @@ def delete_all_user_data(id):
             connection.close()
             print("MySQL connection is closed")
 
-delete_all_user_data([3])
+#delete_all_user_data([3])

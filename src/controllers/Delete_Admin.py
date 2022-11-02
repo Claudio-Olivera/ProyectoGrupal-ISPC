@@ -26,4 +26,4 @@ def delete_admin(id):
             connection.close()
             print("MySQL connection is closed")
 
-delete_admin([2])
+#delete_admin(26)

@@ -10,7 +10,7 @@ try:
 #Claudio Olivera: - Esta tabla Contacto se genera sin ser conectada a otras tablas, no se necesitan autenticaciones de usuario ya que esta echa para que cualquiera que acceda a la web, pueda enviar un mensaje. 
 
     mySql_Create_Table_Query = """CREATE TABLE Contacto ( 
-                            Id_Contacto int(11) NOT NULL AUTO_INCREMENT,
+                            Id_Contacto int(11) NOT NULL,
                             Name varchar(100) NOT NULL,
                             Email varchar(100) NOT NULL,
                             Message varchar(250) NOT NULL,

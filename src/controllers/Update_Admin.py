@@ -1,6 +1,6 @@
 import mysql.connector
 
-def update_admin_data(username,email,password,Id_admin):
+def update_admin_data(self):
     try:
         connection = mysql.connector.connect(host='localhost',
                                         database='new_schema',
@@ -9,10 +9,10 @@ def update_admin_data(username,email,password,Id_admin):
 
     #Aca hay que pasarle un parametro a id_admin, para que sepa a que admin modificarle el password.
 
-        mySql_insert_query = " UPDATE admin SET username=%s,email=%s,password=%s WHERE Id_admin=%s"
-        record=(username,email,password,Id_admin)
         cursor = connection.cursor()
-        cursor.execute(mySql_insert_query, record, id)
+        mySql_insert_query = " UPDATE admin SET username=%s,email=%s,password=%s WHERE Id_Admin=%s"
+        record=(self.username,self.email,self.password,self.Id_Admin)
+        cursor.execute(mySql_insert_query, record)
         connection.commit()
         print(cursor.rowcount, "registro(s) actualizado") 
 
@@ -25,4 +25,4 @@ def update_admin_data(username,email,password,Id_admin):
             connection.close()
             print("MySQL connection is closed")
 
-update_admin_data("FernadoL","fernando@hotmail.com","lagartija15",1)
+#update_admin_data("FernadoL","fernando@hotmail.com","lagartija15",3)

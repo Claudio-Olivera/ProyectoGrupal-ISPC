@@ -1,18 +1,19 @@
 import mysql.connector
 
-def get_admin(id):
+def get_all_contacto():
     try:
         connection = mysql.connector.connect(host='localhost',
                                         database='new_schema',
                                         user='root',
                                         password='rionegri12')
 
-    #esta consulta devuelve el admin correspondiente a la id que se le pasa por parametro a la funcion.
-        mySql_query = "select*from admin where id_Admin=%s"
+    #Esta consulta devuelve todos los datos de user y con los datos de user_card y more_data,de esta forma obtengo en 1 consulta todos los datos relacionados a user.
+    # Hay que pasarle el id_user que quiero consultar.
 
-        record=(id)
+        mySql_query = "select*from contacto;"
+
         cursor = connection.cursor()
-        cursor.execute(mySql_query, record)
+        cursor.execute(mySql_query)
 
         rows = cursor.fetchall()
         for row in rows:
@@ -21,12 +22,10 @@ def get_admin(id):
         cursor.close()
 
     except mysql.connector.Error as error:
-        print("Failed to get admin data from admin table. {}".format(error))
+        print("Failed to select all data related to contacto table {}".format(error))
 
     finally:
         if connection.is_connected():
             connection.close()
             print("MySQL connection is closed")
 
-
-#get_admin([1])

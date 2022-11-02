@@ -1,6 +1,6 @@
 import mysql.connector
 
-def insert_user(user,email, password):
+def insert_user(self):
         try:
                 connection = mysql.connector.connect(host='localhost',
                                         database='new_schema',
@@ -8,10 +8,10 @@ def insert_user(user,email, password):
                                         password='rionegri12')
                 cursor = connection.cursor()
 
-                mySql_insert_query = """INSERT INTO user ( User, Email, Password) 
-                                VALUES (%s,%s,%s) """
+                mySql_insert_query = """INSERT INTO user (Id_User, User, Email, Password) 
+                                VALUES (%s,%s,%s,%s) """
                 
-                record = (user,email, password)
+                record = (self.Id_User, self.user, self.email, self.password)
                 cursor.execute(mySql_insert_query, record)
                 connection.commit()
                 print("Record inserted successfully into User table")
@@ -25,4 +25,4 @@ def insert_user(user,email, password):
                         connection.close()
                         print("MySQL connection is closed")
 
-insert_user('LarissaCaptain', 'Timonesrobados@gmail.com', 'timonesl23')
+#insert_user('LarissaCaptain', 'Timonesrobados@gmail.com', 'timonesl23')

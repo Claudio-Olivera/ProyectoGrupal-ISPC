@@ -1,6 +1,6 @@
 import mysql.connector
 
-def insert_admin(username, email, password):
+def insert_admin(self):
     try:
         connection = mysql.connector.connect(host='localhost',
                                         database='new_schema',
@@ -8,10 +8,10 @@ def insert_admin(username, email, password):
                                         password='rionegri12')
         cursor = connection.cursor()
 # No le paso id , ya que al estar seteado automatico en la tabla no es necesario enviarlo desde aqui.
-        mySql_insert_query = """INSERT INTO admin (Username, Email, Password) 
-                                VALUES (%s,%s,%s) """
+        mySql_insert_query = """INSERT INTO admin (Id_Admin, Username, Email, Password) 
+                                VALUES (%s,%s,%s,%s) """
 
-        record = (username, email, password)
+        record = (self.Id_Admin, self.username, self.email, self.password)
         cursor.execute(mySql_insert_query, record)
         connection.commit()
         print("Record inserted successfully into Admin table")
@@ -26,6 +26,6 @@ def insert_admin(username, email, password):
                 print("MySQL connection is closed")
 
 #paso parametros a la variable create_admin.
-insert_admin('Claude', 'claude89@gmail.com', 'rioja12')
-insert_admin('Marian', 'marian19@gmail.com', 'marialQ12')
+#insert_admin('Claude', 'claude89@gmail.com', 'rioja12')
+#insert_admin('Marian', 'marian19@gmail.com', 'marialQ12')
 

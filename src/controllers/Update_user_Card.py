@@ -1,6 +1,6 @@
 import mysql.connector
 
-def update_user_card(mascotas,presentacion,Imagen,id_user_Card):
+def update_user_card(self):
     try:
         connection = mysql.connector.connect(host='localhost',
                                         database='new_schema',
@@ -8,9 +8,9 @@ def update_user_card(mascotas,presentacion,Imagen,id_user_Card):
                                         password='rionegri12')
 
     #Aca hay que pasarle un parametro a Id_user_Card, para saber a quien modificar y hay que ver como pasarle todos los datos o solo uno..
-        mySql_insert_query = " UPDATE user_card SET Mascotas=%s, Presentacion=%s, Imagen=%s WHERE Id_user_Card=%s;"
-        record=(mascotas,presentacion,Imagen,id_user_Card)
         cursor = connection.cursor()
+        mySql_insert_query = " UPDATE user_card SET Mascotas=%s, Presentacion=%s, Imagen=%s WHERE Id_user_Card=%s;"
+        record=(self.Mascotas,self.Presentacion,self.Imagen,self.Id_user_Card)
         cursor.execute(mySql_insert_query, record)
         connection.commit()
         print(cursor.rowcount, "registro(s) actualizado") 
@@ -24,4 +24,4 @@ def update_user_card(mascotas,presentacion,Imagen,id_user_Card):
             connection.close()
             print("MySQL connection is closed")
             
-update_user_card('Aves, Perros','Soy Larisa, me encantan las mascotas, me considero muy capaz para el cuidado de reptiles en particular.','/images/nuevaImgReptil.jpg',1)
+#update_user_card('Aves, Perros','Soy Larisa, me encantan las mascotas, me considero muy capaz para el cuidado de reptiles en particular.','/images/nuevaImgReptil.jpg',1)
