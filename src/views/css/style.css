@@ -261,3 +261,16 @@ ol li {
     color: white !important;
     font-weight: bold;
 }
+/*Contactanos*/
+.h1__contactanos{
+    margin-top: 2%;
+    text-align: center;
+}
+
+textarea.form-control {
+    height: 10rem;
+}
+
+.button__enviar{
+    background-color: var(--violetFluor) !important;
+}
