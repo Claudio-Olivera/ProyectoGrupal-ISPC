@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,23 +14,9 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <!-- Favicon -->
-    <link rel="Shortcut icon" href="assets/IMG/favicon.png" type="image/x-icon" />
-    <script src="js/registrate.js"></script>
-
-    <title>CuidaPets</title>
+    <link rel="Shortcut icon" href="assets/IMG/favicon.png" type="image/x-icon"/>
+        <title>CuidaPets</title>
 </head>
-<script>
-    seccionActual = "seccionHome";
-    function irASeccion(destino) {
-        if (destino != seccionActual) {
-            document.getElementById(seccionActual).style.display = "none";
-            document.getElementById(destino).style.display = "block";
-
-            seccionActual = destino;
-        }
-    }
-
-</script>
 
 <body>
     <header>
@@ -56,24 +41,18 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" onclick="irASeccion('seccionHome');">Home</a>
+                            <a class="nav-link active" href="registrate.html">Registrate</a>
                         </li>
                         <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" onclick="irASeccion('seccionSobreNosotros')">Sobre Nosotros</a>
+                            <a class="nav-link active" href="sobreNosotros.html">Sobre Nosotros</a>
                         </li>
                         <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" onclick="irASeccion('seccionCuidadores');">Cuidadores</a>
+                            <a class="nav-link active" href="cuidadores.html">Cuidadores</a>
                         </li>
                         <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" onclick="irASeccion('seccionContactanos')">Contáctanos</a>
+                            <a class="nav-link active" href="contactanos.html">Contáctanos</a>
                         </li>
-                        <li class="nav-item nav justify-content-center" id="menuRegistrate">
-                            <a class="nav-link active" onclick="irASeccion('seccionRegistrate');">Registrate</a>
-                        </li>
-                        <li class="nav-item nav justify-content-center" id="menuCerrarSesion" style="display:none;">
-                            <a class="nav-link active" onclick="cerrarSesion();" id="menuCerrarSesionLink">Salir</a>
-                        </li>
-                        <li class="nav-item nav justify-content-center" id="menuIniciarSesion">
+                        <li class="nav-item nav justify-content-center">
                             <a class="nav-link active" href="" data-bs-target="#IniciarSesionModal"
                                 data-bs-toggle="modal" title="Iniciar Sesión"><i class="fa-regular fa-user h4"></i></a>
                         </li>
@@ -83,7 +62,6 @@
         </nav>
     </div>
     <!-- FIN DE NAVBAR -->
-
     <!--Inicio Modal de iniciar Sesion -->
     <div class="modal fade" id="IniciarSesionModal" tabindex="-1" aria-labelledby="sesionModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -95,12 +73,11 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="Email">Email<span class="text-danger">*</span></label>
-                        <input type="email" name="loginUserName" class="form-control" id="loginUserName"
-                            placeholder="ingresa tu Usuario">
+                        <input type="email" name="email" class="form-control" id="Email" placeholder="ingresa tu Email">
                     </div>
                     <div class="mb-3">
                         <label for="Contraseña">Contraseña<span class="text-danger">*</span></label>
-                        <input type="password" name="contraseña" class="form-control" id="loginPassword"
+                        <input type="password" name="contraseña" class="form-control" id="Contraseña"
                             placeholder="Ingresa tu Contraseña">
                     </div>
                     <div class="mb-3">
@@ -109,18 +86,8 @@
                         <a href="#" class="float-end">Olvidé mi contraseña</a>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center" >
-                    <div class="spinner-border" role="status" id="iniciarSesionSpinner" style="display: none;">
-                        <span class="sr-only">Verificando...</span>
-                    </div>
-                </div>
-
-                <div class="alert alert-danger" id="iniciarSesionError" role="alert" style="display: none;">
-                    Usuario y/o pass inexistentes.
-                </div>
-
                 <div class="modal-footer pt-4">
-                    <button type="button" class="btn btn-success mx-auto w-100" onclick="login();">Iniciar
+                    <button type="button" class="btn btn-success mx-auto w-100">Iniciar
                         Sesión</button>
                 </div>
                 <p class="text-center">No tienes cuenta? crea una aquí:
@@ -213,547 +180,106 @@
 
 
     <main>
-        <div id="seccionHome" class="justify-content-center">
-            <!-- Cambio, pasar seccion experiencias de usuario a main en home para utilizar todo el home como contenido promocional -->
-            <div>
-                <section class="section">
-                    <h2 class="section__title text-center">Necesitas que alguien cuide tu mascota?</h2><br>
-                    <img src="./assets/IMG/cuidados.jpeg" alt="cuidados" class="w-75 h-50 img-thumbnail"> <br>
-                    <p class="section__p text-justify">
-                        Entendemos que existen muchos motivos por los cuales contratar a alguien que cuide de tu mascota
-                        es
-                        la decisión mas sabia a tomar, independientemente de cuál sea tu motivo,
-                        <strong>CuidaPets</strong>
-                        te ayudará a encontrar cuidadores que se adapten a tus necesidades y las de tu mascota.
-                    <ul>
-                        <li>El pago lo acuerdas con el cuidador</li>
-                        <li>En ningún momento te cobraremos por usar nuestros servicios</li>
-                        <li>Podrás ver los cuidadores mejor puntuados y participar puntuando al cuidador que hayas
-                            contratado.</li>
-                    </ul>
-                    </p>
-                    <!-- aca posible imagen , video , etc -->
-                </section>
 
-
-                <section class="section">
-                    <h2 class="section__title text-center">Que beneficios tengo al contratar un cuidador?</h2><br>
-
-                    <img src="./assets/IMG/cuidador.jpg" alt="cuidador chocando los cinco con perro"
-                        class="w-75 h-50 img-thumbnail"> <br>
-
-                    <p class="section__p text-justify">
-                        Cada vez más dueños de mascotas utilizan los servicios de cuidadores de mascotas profesionales
-                        para
-                        aprovechar los beneficios que brinda el cuidado de mascotas en el hogar:
-                    <ul>
-                        <li>Las mascotas son más felices y experimentan menos estrés.</li>
-                        <li>Las rutinas de dieta y ejercicio son ininterrumpidas.</li>
-                        <li>Se elimina el trauma del viaje tanto para el dueño como para la mascota.</li>
-                        <li>Se minimiza la exposición de las mascotas a enfermedades.</li>
-                        <li>No es necesario llamar a amigos/familiares/vecinos no capacitados o no dispuestos.</li>
-                    </ul>
-                    </p>
-                    <!-- aca posible imagen , video , etc -->
-                </section>
-
-
-                <section class="section">
-                    <h2 class="section__title text-center">Quieres trabajar cuidando mascotas?</h2> <br>
-
-                    <img src="./assets/IMG/food-cat.jpg" alt="persona alimentando gato" class="w-75 h-50 img-thumbnail">
-                    <br>
-
-                    <p class="section__p text-justify">
-                        Registrate en nuestra web y publicítate como cuidador de mascotas, ten en cuenta que los dueños
-                        de
-                        las mascotas podrán <b>puntuar tu desempeño</b>, es decir, mientras mejor hagas tu trabajo, mas
-                        usuarios querrán contratar tus servicios de cuidado.
-
-                    <ul>
-                        <li>La oportunidad de ser tu propio jefe</li>
-                        <li>Sin comisiones, <strong>CuidaPets</strong> no te cobrará ni te descontará nada.</li>
-                        <li>El precio del servicio lo pones tú</li>
-                    </ul>
-                    <p class="section__p text-justify">
-                        Los cuidadores de mascotas realizan una variedad de tareas, que incluyen:
-                    </p>
-
-                    <ul>
-                        <li>En primer lugar, ¡amar los animales!</li>
-                        <li>Alimentar a las mascotas y cambiar sus tazones de agua.</li>
-                        <li>Proporcionar ejercicio y tiempo de juego (puede incluir pasear al perro)</li>
-                        <li>Limpiar cajas de arena y limpiar cualquier otro desorden de mascotas.</li>
-                        <li>Administrar medicamentos para mascotas, si es necesario.</li>
-                    </ul>
-
-                    </p>
-                    <!-- aca posible imagen , video , etc -->
-                </section>
-            </div>
-
-
-            <h3 class="section__title text-center">Algunas experiencias de nuestros usuarios</h3><br>
-
-            <img class="rounded-circle img__user" src="assets/IMG/exp_perf_1.jpg" alt="foto de un usuario"> <i>Fernanda
-                -
-                C.A.B.A</i>
-            <p class="section__p text-center"> <i>-La verdad no puedo estar mas contenta con la web, es muy fácil de
-                    usar y
-                    mis mascotas estuvieron super cuidadas cuando me fui de vacaciones. </i>
-            </p>
-            <br>
-
-            <img class="rounded-circle img__user" src="assets/IMG/exp_perf_2.jpg" alt="foto de un usuario"> <i>Juan -
-                Prov.
-                de Buenos Aires</i>
-            <p class="section__p text-center"> <i>-Necesitaba a alguien responsable que pudiera darle la medicación a mi
-                    perro, gracias a este sitio pude contactar con un chico super responsable que se hizo cargo de todo
-                    mientras yo trabajaba. </i>
-            </p>
-            <br>
-
-            <img class="rounded-circle img__user" src="assets/IMG/exp_perf_3.jpg" alt="foto de un usuario"> <i>Milagros
-                -
-                C.A.B.A</i>
-            <p class="section__p text-center"> <i>-Nunca pensé que gracias a <b>CuidaPets</b> iba a poder convertir mi
-                    pasión por los animales en una fuente de ingreso. Soy feliz, porque vivo de lo que mas me gusta
-                    hacer.
-                </i>
-            </p>
-        </div>
-        <div id="seccionCuidadores" style="display: none;">
-            <h1 class="h1__cuidadores">Cuidadores</h1>
-
-
-            <!-- Aca faltaria colocar un buscador con filtros de busqueda para los cuidadores. -->
-
-
-            <h4 class="text-center">Aquí puedes ver todos los cuidadores registrados en la web!!</h4>
-
-            <section class="card__cuidadores">
-
-                <!--Inicio de cards cuidadores, luego al consumir backend, por cada cuidador se creará automaticamente una nueva (con solo definir una en el html, será suficiente para colocarlas todas)-->
-
-                <!-- primera card -->
-                <div class="d-flex align-items-center justify-content-center espaciador">
-                    <div class="card text-center">
-                        <div class="container__img">
-                            <img src="./assets/IMG/300x200img.png"
-                                alt="imagen representativa y promocional de cuidador" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Juan Pérez</h5>
-                            <p class="card-text">
-                                Texto donde Juan explicaria brevemente su oferta, con un maximo de carácteres
-                                permitidos.
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <div class="ratings">
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </li>
-                            <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-788433</li>
-                            <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> Buenos Aires - Merlo
-                            </li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Mas info</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- segunda card -->
-                <div class="d-flex align-items-center justify-content-center espaciador">
-                    <div class="card text-center">
-                        <div class="container__img">
-                            <img src="./assets/IMG/300x200img.png"
-                                alt="imagen representativa y promocional de cuidador" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Laura Estive</h5>
-                            <p class="card-text">
-                                Texto donde Laura explicaria brevemente su oferta, con un maximo de carácteres
-                                permitidos.
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <div class="ratings">
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                </div>
-                            </li>
-                            <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-788423</li>
-                            <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> Córdoba - Gral.San
-                                Martin</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Mas info</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- tercera card -->
-                <div class="d-flex align-items-center justify-content-center espaciador">
-                    <div class="card text-center">
-                        <div class="container__img">
-                            <img src="./assets/IMG/300x200img.png"
-                                alt="imagen representativa y promocional de cuidador" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Patricia Jimenez</h5>
-                            <p class="card-text">
-                                Texto donde Patricia explicaria brevemente su oferta, con un máximo de carácteres
-                                permitidos.
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <div class="ratings">
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </li>
-                            <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-787433</li>
-                            <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> C.A.B.A - San Telmo
-                            </li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Mas info</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- cuarta card -->
-                <div class="d-flex align-items-center justify-content-center espaciador">
-                    <div class="card text-center">
-                        <div class="container__img">
-                            <img src="./assets/IMG/300x200img.png"
-                                alt="imagen representativa y promocional de cuidador" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Fernando Segel</h5>
-                            <p class="card-text">
-                                Texto donde Fernando explicaria brevemente su oferta, con un maximo de carácteres
-                                permitidos.
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <div class="ratings">
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </li>
-                            <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-782433</li>
-                            <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> Rio Negro - General
-                                Roca </li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Mas info</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- quinta card -->
-                <div class="d-flex align-items-center justify-content-center espaciador">
-                    <div class="card text-center">
-                        <div class="container__img">
-                            <img src="./assets/IMG/300x200img.png"
-                                alt="imagen representativa y promocional de cuidador" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Julieta Valladares</h5>
-                            <p class="card-text">
-                                Texto donde Julieta explicaria brevemente su oferta, con un maximo de carácteres
-                                permitidos.
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <div class="ratings">
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                </div>
-                            </li>
-                            <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-771423</li>
-                            <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> Santa Fe - Rosario</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Mas info</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- sexta card -->
-                <div class="d-flex align-items-center justify-content-center espaciador">
-                    <div class="card text-center">
-                        <div class="container__img">
-                            <img src="./assets/IMG/300x200img.png"
-                                alt="imagen representativa y promocional de cuidador" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Maria Acosta</h5>
-                            <p class="card-text">
-                                Texto donde María explicaria brevemente su oferta, con un maximo de carácteres
-                                permitidos.
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <div class="ratings">
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </li>
-                            <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-744411</li>
-                            <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> San Luis - Merlo</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Mas info</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- septima card -->
-                <div class="d-flex align-items-center justify-content-center espaciador">
-                    <div class="card text-center">
-                        <div class="container__img">
-                            <img src="./assets/IMG/300x200img.png"
-                                alt="imagen representativa y promocional de cuidador" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Javier Nuñez</h5>
-                            <p class="card-text">
-                                Texto donde Javier explicaria brevemente su oferta, con un maximo de carácteres
-                                permitidos.
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <div class="ratings">
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </li>
-                            <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-781233</li>
-                            <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> San Juan - Caucete
-                            </li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Mas info</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- octava card -->
-                <div class="d-flex align-items-center justify-content-center espaciador">
-                    <div class="card text-center">
-                        <div class="container__img">
-                            <img src="./assets/IMG/300x200img.png"
-                                alt="imagen representativa y promocional de cuidador" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Antonella Andrade</h5>
-                            <p class="card-text">
-                                Texto donde Antonella explicaria brevemente su oferta, con un maximo de carácteres
-                                permitidos.
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <div class="ratings">
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star rating-color"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </li>
-                            <li class="list-group-item"><i class="fa-solid fa-phone-flip"></i> +54 2984-628413</li>
-                            <li class="list-group-item"><i class="fa-solid fa-location-dot"></i> C.A.B.A - Palermo</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Mas info</a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Cambio, pasar seccion experiencias de usuario a main en home para utilizar todo el home como contenido promocional -->
+        <div class="width__sections">
+            <section class="section">
+                <h2 class="section__title text-center">Necesitas que alguien cuide tu mascota?</h2><br>
+                <img src="./assets/IMG/cuidados.jpeg" alt="cuidados" class="w-75 h-50 img-thumbnail"> <br>
+                <p class="section__p text-justify">
+                    Entendemos que existen muchos motivos por los cuales contratar a alguien que cuide de tu mascota es
+                    la decisión mas sabia a tomar, independientemente de cuál sea tu motivo, <strong>CuidaPets</strong>
+                    te ayudará a encontrar cuidadores que se adapten a tus necesidades y las de tu mascota.
+                <ul>
+                    <li>El pago lo acuerdas con el cuidador</li>
+                    <li>En ningún momento te cobraremos por usar nuestros servicios</li>
+                    <li>Podrás ver los cuidadores mejor puntuados y participar puntuando al cuidador que hayas
+                        contratado.</li>
+                </ul>
+                </p>
+                <!-- aca posible imagen , video , etc -->
             </section>
 
-        </div>
-        <div id="seccionSobreNosotros" style="display: none;">
-            <h1 class="h1__sobreNosotros">Sobre Nosotros</h1>
 
             <section class="section">
-                <h3 class="section__title text-center">Un equipo que jamás mete la pata</h3><br>
+                <h2 class="section__title text-center">Que beneficios tengo al contratar un cuidador?</h2><br>
 
-                <img class="img-fluid" src="assets/IMG/personascomprometidas.png"
-                    alt="un equipo de personas comprometidas" id="percomp"> <br>
+                <img src="./assets/IMG/cuidador.jpg" alt="cuidador chocando los cinco con perro"
+                    class="w-75 h-50 img-thumbnail"> <br>
 
-                <p class="section__p text-justify">En CuidaPets somos un grupo de personas que ocasionalmente fuimos
-                    unidas por una misma premisa compartida en común por todos los integrantes: El cuidado general de
-                    los seres más queridos de nuestras casas, las mascotas.</p>
-                <p class="section__p text-justify">Cuando por algún motivo de cualquier índole, necesitamos ausentarnos
-                    de nuestro domicilio por un lapso determinado o indeterminado de tiempo, no podemos pasar por alto
-                    quizás la más importante de las cuestiones, el pensar y/o decidir quién quedará a cargo del cuidado
-                    de esos seres tan especiales que llenan de amor nuestro hogar.</p>
-                <p class="section__p text-justify">Nosotros desde CuidaPets logramos identificar la gran demanda social
-                    que existía entorno a esta problemática no cubierta y decidimos emprender este innovador camino que
-                    es brindar soluciones integrales a toda aquella persona que se encuentre en la disyuntiva
-                    mencionada, contamos con un plantel de cuidadores capacitados, que brindan los más variados
-                    servicios, incorporando constantemente nuevas prestaciones tanto como también nuevas personas al
-                    gran equipo que nos conforma. </p>
-                <p class="section__p text-justify">Encontrará en nosotros eficiencia, eficacia, transparencia y
-                    responsabilidad absoluta. Poseemos profesionales evaluados por los clientes, bajo una metodología
-                    que brinda seguridad y confianza para su total tranquilidad. </p>
-                <p class="section__p text-justify">Estamos prestando servicios en todos los rincones de la República
-                    Argentina (En las 23 provincias y en la Ciudad Autonoma de Buenos Aires). Con proyección a
-                    expandirnos internacionalmente en un futuro dado el gran éxito que CuidaPets está teniendo entre
-                    tantas personas que deciden apostar a nosotros día a día. </p>
-                <img src="assets/IMG/mapargent.png" alt="Mapa de Argentina" id="mapargent">
-                <p> </p>
-                <p class="section__p text-justify">El lema que nos define es <i>“Un animal feliz, logra un hogar
-                        feliz”</i>, y es lo que usted encontrará al volver a su casa. Cientos de clientes y mascotas
-                    ponen la firma y lo confirman.</p>
-                <img src="assets/IMG/huella.png" alt="huella de perro" id="huella">
-                <hr width="50%" size="5px">
+                <p class="section__p text-justify">
+                    Cada vez más dueños de mascotas utilizan los servicios de cuidadores de mascotas profesionales para
+                    aprovechar los beneficios que brinda el cuidado de mascotas en el hogar:
+                <ul>
+                    <li>Las mascotas son más felices y experimentan menos estrés.</li>
+                    <li>Las rutinas de dieta y ejercicio son ininterrumpidas.</li>
+                    <li>Se elimina el trauma del viaje tanto para el dueño como para la mascota.</li>
+                    <li>Se minimiza la exposición de las mascotas a enfermedades.</li>
+                    <li>No es necesario llamar a amigos/familiares/vecinos no capacitados o no dispuestos.</li>
+                </ul>
+                </p>
+                <!-- aca posible imagen , video , etc -->
             </section>
 
-        </div>
-        <div id="seccionContactanos" style="display: none;">
-            <h1 class="h1__contactanos">Contáctanos</h1>
-            <div class="container py-4">
-                <form id="contactForm">
-                    <div class="mb-3">
-                        <label class="form-label" for="name">Nombre</label>
-                        <input class="form-control" id="name" type="text" placeholder="Nombre" />
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="email">Email</label>
-                        <input class="form-control" id="email" type="email" placeholder="Email" />
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="mensaje">Mensaje</label>
-                        <textarea class="form-control" id="mensaje" type="text" placeholder="Mensaje"></textarea>
-                    </div>
-                    <div class="d-grid">
-                        <button class="btn button__enviar text-white fw-bold btn-lg" type="submit">Enviar
-                            Mensaje</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div id="seccionRegistrate" style="display: none;">
-            <section class="vh-100" style="background-color: #eee;">
-                <div class="container h-100">
-                    <div class="row d-flex justify-content-center align-items-center h-100">
-                        <div class="col-lg-12 col-xl-11">
-                            <div class="card text-black" style="border-radius: 25px;">
-                                <div class="card-body p-md-5">
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                                            <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registrate</p>
+            <section class="section">
+                <h2 class="section__title text-center">Quieres trabajar cuidando mascotas?</h2> <br>
 
-                                            <form class="mx-1 mx-md-4" name="formularioRegistro">
+                <img src="./assets/IMG/food-cat.jpg" alt="persona alimentando gato" class="w-75 h-50 img-thumbnail">
+                <br>
 
-                                                <div class="d-flex flex-row align-items-center mb-4">
-                                                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                                    <div class="form-outline flex-fill mb-0">
-                                                        <input type="text" id="nombreUsuario" class="form-control" />
-                                                        <label class="form-label" for="form3Example1c">Tu
-                                                            Usuario</label>
-                                                    </div>
-                                                </div>
+                <p class="section__p text-justify">
+                    Registrate en nuestra web y publicítate como cuidador de mascotas, ten en cuenta que los dueños de
+                    las mascotas podrán <b>puntuar tu desempeño</b>, es decir, mientras mejor hagas tu trabajo, mas
+                    usuarios querrán contratar tus servicios de cuidado.
 
-                                                <div class="d-flex flex-row align-items-center mb-4">
-                                                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                                    <div class="form-outline flex-fill mb-0">
-                                                        <input type="email" id="mailDeUsuario" class="form-control" />
-                                                        <label class="form-label" for="form3Example3c">Tu Mail</label>
-                                                    </div>
-                                                </div>
+                <ul>
+                    <li>La oportunidad de ser tu propio jefe</li>
+                    <li>Sin comisiones, <strong>CuidaPets</strong> no te cobrará ni te descontará nada.</li>
+                    <li>El precio del servicio lo pones tú</li>
+                </ul>
+                <p class="section__p text-justify">
+                    Los cuidadores de mascotas realizan una variedad de tareas, que incluyen:
+                </p>
 
-                                                <div class="d-flex flex-row align-items-center mb-4">
-                                                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                                    <div class="form-outline flex-fill mb-0">
-                                                        <input type="password" id="clave" class="form-control" />
-                                                        <label class="form-label" for="form3Example4c">Clave</label>
-                                                    </div>
-                                                </div>
+                <ul>
+                    <li>En primer lugar, ¡amar los animales!</li>
+                    <li>Alimentar a las mascotas y cambiar sus tazones de agua.</li>
+                    <li>Proporcionar ejercicio y tiempo de juego (puede incluir pasear al perro)</li>
+                    <li>Limpiar cajas de arena y limpiar cualquier otro desorden de mascotas.</li>
+                    <li>Administrar medicamentos para mascotas, si es necesario.</li>
+                </ul>
 
-                                                <div class="d-flex flex-row align-items-center mb-4">
-                                                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                                    <div class="form-outline flex-fill mb-0">
-                                                        <input type="password" id="repeticionDeClave"
-                                                            class="form-control" />
-                                                        <label class="form-label" for="form3Example4cd">Repetí tu
-                                                            Clave</label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="alert alert-success" id="mensajeExitoso" role="alert"
-                                                    style="display: none;">
-                                                    Registro realizado!
-                                                </div>
-
-                                                <div class="alert alert-danger" id="mensajeDeError" role="alert"
-                                                    style="display: none;">
-                                                    This is a danger alert—check it out!
-                                                </div>
-
-                                                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                    <button type="button" class="btn btn-primary btn-lg"
-                                                        onclick="formValidation();"
-                                                        id="botonRegistro">Registrarme</button>
-                                                </div>
-
-
-                                            </form>
-
-                                        </div>
-                                        <div
-                                            class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                                            <img src="assets/IMG/cabeceraRegistro.png" class="img-fluid"
-                                                alt="Sample image">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </p>
+                <!-- aca posible imagen , video , etc -->
             </section>
-
         </div>
+
+
+        <h3 class="section__title text-center">Algunas experiencias de nuestros usuarios</h3><br>
+
+        <img class="rounded-circle img__user" src="assets/IMG/exp_perf_1.jpg" alt="foto de un usuario"> <i>Fernanda -
+            C.A.B.A</i>
+        <p class="section__p text-center"> <i>-La verdad no puedo estar mas contenta con la web, es muy fácil de usar y
+                mis mascotas estuvieron super cuidadas cuando me fui de vacaciones. </i>
+        </p>
+        <br>
+
+        <img class="rounded-circle img__user" src="assets/IMG/exp_perf_2.jpg" alt="foto de un usuario"> <i>Juan - Prov.
+            de Buenos Aires</i>
+        <p class="section__p text-center"> <i>-Necesitaba a alguien responsable que pudiera darle la medicación a mi
+                perro, gracias a este sitio pude contactar con un chico super responsable que se hizo cargo de todo
+                mientras yo trabajaba. </i>
+        </p>
+        <br>
+
+        <img class="rounded-circle img__user" src="assets/IMG/exp_perf_3.jpg" alt="foto de un usuario"> <i>Milagros -
+            C.A.B.A</i>
+        <p class="section__p text-center"> <i>-Nunca pensé que gracias a <b>CuidaPets</b> iba a poder convertir mi
+                pasión por los animales en una fuente de ingreso. Soy feliz, porque vivo de lo que mas me gusta hacer.
+            </i>
+        </p>
+
     </main>
 
 
@@ -780,29 +306,7 @@
 
 </body>
 <script src="./js/index.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-
 <!-- Font awesome -->
 <script src="https://kit.fontawesome.com/6dfa6ca8b0.js" crossorigin="anonymous"></script>
-
-<script>
-    $( document ).ready(function() {
-        if (localStorage.getItem("email") !== null) {
-            document.getElementById("menuRegistrate").style.display = "none";
-            document.getElementById("menuIniciarSesion").style.display = "none";
-            document.getElementById("menuCerrarSesion").style.display = "block";
-            document.getElementById("iniciarSesionSpinner").style.display = "none";
-            document.getElementById("menuCerrarSesionLink").textContent = "Cerrar sesion "+localStorage.getItem('email');
-
-        } else {
-            document.getElementById("menuRegistrate").style.display = "block";
-            document.getElementById("menuIniciarSesion").style.display = "block";
-            document.getElementById("menuCerrarSesion").style.display = "none";
-            document.getElementById("iniciarSesionError").style.display = "none";    
-        }
-    console.log( "ready!" );
-});
-</script>
 
 </html>
