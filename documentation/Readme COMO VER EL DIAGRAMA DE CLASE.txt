@@ -1,2 +1,0 @@
-Opcion 1 : Para ver el diagrama de clase acceder a la siguiente web https://app.diagrams.net/ y cargar el archivo en la misma.
-Opcion 2 : Instalar en extensiones de VSCode la extension "Draw.io Integration".
