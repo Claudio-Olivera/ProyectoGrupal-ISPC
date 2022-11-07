@@ -204,3 +204,13 @@ main{
     }
 }
 
+/*faq*/
+li{
+    color: var(--violetFluor) !important;
+    font-weight: bold;
+}
+
+ol li {
+    color: black !important;
+    font-weight: inherit;
+}
