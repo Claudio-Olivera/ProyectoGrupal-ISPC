@@ -2,8 +2,12 @@
 
 ## Puede visitar el sitio en los siguientes links: 
 
+http://cuidapets.xh.ar (este tiene un registro y login funcionales, aunque el backend ocasionalmente se cae y hay que levantarlo manualmente)
+
 ### Netlify:
-https://cuidapets.netlify.app/
+https://cuidapets.netlify.app/ (una version previa, solo front)
+
+
 ### Github Pages:
 https://claudio-olivera.github.io/ProyectoGrupal-ISPC/
 
