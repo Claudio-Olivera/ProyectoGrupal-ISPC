@@ -1,0 +1,56 @@
+<h1 class="h1__cuidadores">Iniciar Sesión</h1>
+
+<section class="container-fluid" style="background-color: #eee;">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-4">
+            <label for="Email">Usuario<span class="text-danger">*</span></label>
+            <input type="email" name="loginUserName" class="form-control" id="loginUserName"
+                placeholder="ingresa tu Usuario">
+        </div>
+        <div class="col-4">
+            <label for="Contraseña">Contraseña<span class="text-danger">*</span></label>
+            <input type="password" name="contraseña" class="form-control" id="loginPassword"
+                placeholder="Ingresa tu Contraseña">
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-4">
+            <input class="form-check-input" type="checkbox" value="" id="remember" required>
+            <label class="form-check-label" for="remember">Recordarme</label>
+            <a href="#" class="float-end">Olvidé mi contraseña</a>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-4 justify-content-center">
+            <div class="spinner-border" role="status" id="iniciarSesionSpinner" style="display: none;">
+                <span class="sr-only">Verificando...</span>
+            </div>
+            <div class="alert alert-danger" id="iniciarSesionError" role="alert" style="display: none;">
+                Usuario y/o pass inexistentes.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row justify-content-center align-items-center">
+        <div class="col justify-content-center">
+            <div class="footer pt-4">
+                <button type="button" class="btn btn-success mx-auto w-100" onclick="login();">Iniciar Sesión</button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="row justify-content-end">
+        <div class="col-4">
+
+            <p>No tienes cuenta? crea una aquí:</p>
+
+            <a href="#" title="registrate">
+                <button type="button" id="btn__register" class="btn text-white mx-auto"
+                    onclick="irASeccion('seccionRegistrate');">
+                    Registro
+                </button>
+            </a>
+        </div>
+    </div>
+</section>
