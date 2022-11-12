@@ -11,6 +11,11 @@ https://claudio-olivera.github.io/ProyectoGrupal-ISPC/
 
 https://instasoft.xh.ar/
 
+## Project kanban del proyecto link:
+
+https://github.com/users/Claudio-Olivera/projects/3/views/1
+
 ## Nota importante:
 
 Las carpetas llamadas <strong> No implementado </strong>, contienen ideas, diagramas, codigo, etc. que, debido a cambios, se reemplazaron o están a la espera de ser implementados a futuro.
+
