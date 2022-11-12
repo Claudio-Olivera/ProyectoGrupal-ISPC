@@ -4,7 +4,7 @@ try:
     connection = mysql.connector.connect(host='localhost',
                                         database='new_schema',
                                         user='root',
-                                        password='rionegri12')
+                                        password='1234')
 
 #Claudio Olivera: -Esta tabla Admin contendrá los datos del administrador del sistema.
 # -El password de la tabla Admin esta como varchar, pero se puede pasar a binary y guardarla despues de sufrir una encriptacion, como por ejemplo con sha-256.

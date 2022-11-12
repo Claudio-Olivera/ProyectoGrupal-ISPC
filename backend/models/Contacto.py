@@ -1,9 +1,6 @@
 from controller.Sql_Insert import insert_contacto
 from controller.Sql_Delete import delete_contacto
-from controller.Sql_Select import select_contacto
-
-#no borrar este import , se utiliza al descomentar la linea 27
-import controller.Sql_Select
+from controller.Sql_Select import select_contacto, get_all_contacto
 
 class Contacto:
     def __init__(self, name, email, message,Id_Contacto):
@@ -23,10 +20,12 @@ class Contacto:
 #borra el registro de la tabla user_card
     def borrar_contacto(self):
         delete_contacto([self.Id_Contacto])
-        
 
 #obtiene todos los datos de la tabla contacto
-#Sql_Select.get_all_contacto()
+    def obtener_all_contactos():
+        get_all_contacto()
+
+
 
 #Contacto no necesita tener un metodo para actualizar los mensajes.
 
@@ -46,4 +45,5 @@ class Contacto:
 #contacto2.obtener_contacto_por_id()
 
 #contacto1.borrar_contacto()
+
 
