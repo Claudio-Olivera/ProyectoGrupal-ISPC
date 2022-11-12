@@ -13,4 +13,4 @@ https://instasoft.xh.ar/
 
 ## Nota importante:
 
-<span style="color:orange"> Las carpetas llamadas No implementado, son ideas, diagramas, codigo, etc. que, debido a cambios, se reemplazaron o están a la espera de ser implementados a futuro.</span> 
+Las carpetas llamadas *### No implementado*, son ideas, diagramas, codigo, etc. que, debido a cambios, se reemplazaron o están a la espera de ser implementados a futuro.
