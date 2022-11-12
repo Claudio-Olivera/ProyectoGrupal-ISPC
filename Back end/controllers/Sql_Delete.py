@@ -1,11 +1,13 @@
 import mysql.connector
+
+
             #---------------------- BORRADO DE ADMIN POR ID -------------------- #  
 def delete_admin(id):
     try:
         connection = mysql.connector.connect(host='localhost',
                                         database='new_schema',
                                         user='root',
-                                        password='rionegri12')
+                                        password='1234')
 
     #esto esta pensado para borrar admin con"id_admin = 2" se aclara que id de admin borrar, o se pone una variable, que viene desde una def de funcion para que borre ese id que se le indique desde el front. 
 
@@ -26,15 +28,14 @@ def delete_admin(id):
             connection.close()
             print("MySQL connection is closed")
 
-#delete_admin(26)
-            
+
             #---------------------- BORRADO DE TODOS LOS DATOS DE USER -------------------- #  
 def delete_all_user_data(id):
     try:
         connection = mysql.connector.connect(host='localhost',
                                             database='new_schema',
                                             user='root',
-                                            password='rionegri12')
+                                            password='1234')
 
     #esto esta pensado para borrar todos los datos de un usuario, como las tablas tienen borrado en cascada, al eliminar User, se eliminan tambien more_data y user_card
     
@@ -54,7 +55,8 @@ def delete_all_user_data(id):
             connection.close()
             print("MySQL connection is closed")
 
-#delete_all_user_data([3])
+
+
 
             #---------------------- BORRADO DE MENSAJE DE CONTACTO -------------------- #
 def delete_contacto(id):
@@ -62,7 +64,7 @@ def delete_contacto(id):
         connection = mysql.connector.connect(host='localhost',
                                             database='new_schema',
                                             user='root',
-                                            password='rionegri12')
+                                            password='1234')
 
     #esto esta pensado para borrar contacto con"id_contacto = 2" se aclara que id de admin borrar, o se pone una variable, que viene desde una def de funcion para que borre ese id que se le indique desde el front. 
 
@@ -90,7 +92,7 @@ def delete_user_card(id):
         connection = mysql.connector.connect(host='localhost',
                                             database='new_schema',
                                             user='root',
-                                            password='rionegri12')
+                                            password='1234')
 
     #Con esta consulta borro los datos de user_card si tiene id_user_card, pero esto deberia cambiarse con una variable al numero de id del usuario automaticamente, o al numero de "esa" card que el usuario esta seleccionando. Asimismo el usuario no deberia poder eliminar otros id que no sean el de SU CARD.
         mySql_insert_query = " DELETE FROM user_card WHERE Id_user_Card=%s ;"
@@ -110,4 +112,3 @@ def delete_user_card(id):
             connection.close()
             print("MySQL connection is closed")
 
-#delete_user_card([3])

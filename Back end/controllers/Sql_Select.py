@@ -1,11 +1,13 @@
 import mysql.connector
 
+
+###--- select admin por id ---###
 def get_admin(id):
     try:
         connection = mysql.connector.connect(host='localhost',
-                                             database='new_schema',
-                                             user='root',
-                                             password='rionegri12')
+                                            database='new_schema',
+                                            user='root',
+                                            password='1234')
 
         # esta consulta devuelve el admin correspondiente a la id que se le pasa por parametro a la funcion.
         mySql_query = "select*from admin where id_Admin=%s"
@@ -29,18 +31,13 @@ def get_admin(id):
             print("MySQL connection is closed")
 
 
-# get_admin([1])
-
-
+###--- select all contacto ---###
 def get_all_contacto():
     try:
         connection = mysql.connector.connect(host='localhost',
-                                             database='new_schema',
-                                             user='root',
-                                             password='rionegri12')
-
-        # Esta consulta devuelve todos los datos de user y con los datos de user_card y more_data,de esta forma obtengo en 1 consulta todos los datos relacionados a user.
-        # Hay que pasarle el id_user que quiero consultar.
+                                            database='new_schema',
+                                            user='root',
+                                            password='1234')
 
         mySql_query = "select*from contacto;"
 
@@ -62,12 +59,13 @@ def get_all_contacto():
             print("MySQL connection is closed")
 
 
+###--- select all user, user_card , more_data ---###
 def get_complete_user_data(id):
     try:
         connection = mysql.connector.connect(host='localhost',
-                                             database='new_schema',
-                                             user='root',
-                                             password='rionegri12')
+                                            database='new_schema',
+                                            user='root',
+                                            password='1234')
 
         # Esta consulta devuelve todos los datos de user y con los datos de user_card y more_data,de esta forma obtengo en 1 consulta todos los datos relacionados a user.
         # Hay que pasarle el id_user que quiero consultar.
@@ -93,18 +91,15 @@ def get_complete_user_data(id):
             print("MySQL connection is closed")
 
 
-# get_complete_user_data([1])
-
-
+###--- select contacto por id ---###
 def select_contacto(id):
     try:
         connection = mysql.connector.connect(host='localhost',
-                                             database='new_schema',
-                                             user='root',
-                                             password='rionegri12')
+                                            database='new_schema',
+                                            user='root',
+                                            password='1234')
 
-        # Esta consulta devuelve solo los datos de la tabla user
-        # Hay que pasarle el id_user que quiero consultar.
+        # Hay que pasarle el id_contacto que quiero consultar.
 
         mySql_query = "select*from contacto WHERE contacto.Id_Contacto = %s;"
 
@@ -127,15 +122,14 @@ def select_contacto(id):
             print("MySQL connection is closed")
 
 
+###--- select more_data por id ---###
 def get_only_more_data(id):
     try:
         connection = mysql.connector.connect(host='localhost',
-                                             database='new_schema',
-                                             user='root',
-                                             password='rionegri12')
+                                            database='new_schema',
+                                            user='root',
+                                            password='1234')
 
-        # Esta consulta devuelve solo los datos de la tabla user
-        # Hay que pasarle el id_user que quiero consultar.
 
         mySql_query = "select*from more_data WHERE more_data.Id_more_Data = %s;"
 
@@ -158,15 +152,13 @@ def get_only_more_data(id):
             print("MySQL connection is closed")
 
 
-# get_only_more_data([1])
-
-
+###--- select user_card por id ---###
 def get_only_user_card(id):
     try:
         connection = mysql.connector.connect(host='localhost',
-                                             database='new_schema',
-                                             user='root',
-                                             password='rionegri12')
+                                            database='new_schema',
+                                            user='root',
+                                            password='1234')
 
         # Esta consulta devuelve solo los datos de la tabla user_card
         # Hay que pasarle el id_user_card que quiero consultar.
@@ -192,12 +184,13 @@ def get_only_user_card(id):
             print("MySQL connection is closed")
 
 
+###--- select user por id ---###
 def get_only_user(id):
     try:
         connection = mysql.connector.connect(host='localhost',
-                                             database='new_schema',
-                                             user='root',
-                                             password='rionegri12')
+                                            database='new_schema',
+                                            user='root',
+                                            password='1234')
 
         # Esta consulta devuelve solo los datos de la tabla user
         # Hay que pasarle el id_user que quiero consultar.
@@ -222,4 +215,4 @@ def get_only_user(id):
             connection.close()
             print("MySQL connection is closed")
 
-# get_complete_user_data([1])
+
