@@ -28,9 +28,10 @@ class Admin:
         delete_all_user_data(id)
         # -----------------INVOCACION DE METODOS Y CREACION DE OBJETOS----------------------#
 
-admin1 = Admin(1, 'Admin1', 'admin1@gmail.com', 'adminPassword1')
+#admin1 = Admin(1, 'Admin1', 'admin1@gmail.com', 'adminPassword1')
 #admin1.crear_Admin()
-admin1.obtener_admin()
+#admin1.obtener_admin()
 #admin1 = Admin(1,'Admin1', 'adminCambio@gmail.com', 'adminPassword1')
 #admin1.actualizar_admin()
 #admin1.borrar_admin()
+
