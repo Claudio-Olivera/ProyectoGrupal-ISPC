@@ -33,13 +33,13 @@ class User:
 
 # -----------------INVOCACION DE METODOS Y CREACION DE OBJETOS----------------------#
 
-user2 = User(2,'mal1', 'mal2@gmail.com', 'mal2Pass')
+#user2 = User(2,'mal1', 'mal2@gmail.com', 'mal2Pass')
 
 #user2.crear_User()
 
-user2.obtener_user()
+#user2.obtener_user()
 
-user2.borrar_User()
+#user2.borrar_User()
 
 #Obtiene todos los datos relacionados a el user, para usar este metodo, debe primero tener registros en user_card y more_data
 #user2.all_user_data()
