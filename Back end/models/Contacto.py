@@ -37,7 +37,7 @@ class Contacto:
 #contacto1.crear_contacto()
 #contacto1.obtener_contacto_por_id()
 
-#contacto2=Contacto('German', 'german@gmail.com', 'Queria informarles que encontre una brecha de seguridad en su web, comuniquense a mi correo cuanto antes.', 2)
+#contacto2=Contacto('German', 'german@gmail.com', 'Queria agradecerles por la web, me ayuda muchisimo', 2)
 
 #contacto2.crear_contacto()
 #contacto2.obtener_contacto_por_id()
