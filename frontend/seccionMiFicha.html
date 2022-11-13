@@ -13,14 +13,14 @@
                 //      debugger;
                 if (result.status == "ok") {
                     // SI el backnd responde OK
-                    //document.getElementById("mensajeDeError").style.display = "none";
+                    document.getElementById("mensajeDeError").style.display = "none";
                     //document.getElementById("botonRegistro").style.display = "none";
-                    //document.getElementById("mensajeExitoso").style.display = "block";
+                    document.getElementById("mensajeExitoso").style.display = "block";
                     console.log(result);
                 } else {
                     // SINO (si el backend no pudo guardar el suario)
-                    //document.getElementById("mensajeDeError").textContent = result.message;
-                    //document.getElementById("mensajeDeError").style.display = "block";
+                    document.getElementById("mensajeDeError").textContent = result.message;
+                    document.getElementById("mensajeDeError").style.display = "block";
                     console.log(result);
                 }
                 // FIN
@@ -37,8 +37,26 @@
             <label class="form-label" for="mensaje">Descripción</label>
             <textarea class="form-control" id="serviceDescription" type="text" placeholder="Ingresá una descripción de tus servicios aquí"></textarea>
         </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-4 justify-content-center">
+                <div class="spinner-border" role="status" id="inProcessSpinner" style="display: none;">
+                    <span class="sr-only">Verificando...</span>
+                </div>
+
+                <div class="alert alert-success" id="mensajeExitoso" role="alert" style="display: none;">
+                    Ficha Actualizada!
+                </div>
+
+                <div class="alert alert-danger" id="mensajeDeError" role="alert" style="display: none;">
+                    Error
+                </div>
+</div>
+    
+        </div>
+    
+
         <div class="d-grid">
-            <button class="btn button__enviar text-white fw-bold btn-lg" type="submit" onclick="saveBusinessCard();">Guardar Ficha</button>
+            <button class="btn button__enviar text-white fw-bold btn-lg" type="submit" href="#" onclick="saveBusinessCard();">Guardar Ficha</button>
         </div>
     </form>
 </div>
