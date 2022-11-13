@@ -1,3 +1,5 @@
+
+# LEER POR FAVOR
 1.-
 Para poder probar el codigo, utilizar pyCharm para abrirlo ya que VsCode no detecta las importaciones entre carpetas (probamos todos los tipos de importaciones posibles, 
 horas de intentos y modificaciones pero por algun motivo pylance utilizado en vscode no detecta bien las importaciones entre carpetas)
