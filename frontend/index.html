@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contactanos.css" />
+    <link rel="stylesheet" href="css/sobreNosotros.css" />
+    <link rel="stylesheet" href="css/cuidadores.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+
     <!-- BOOTSTRAP CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -14,9 +20,32 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <!-- Favicon -->
-    <link rel="Shortcut icon" href="assets/IMG/favicon.png" type="image/x-icon"/>
-        <title>CuidaPets</title>
+    <link rel="Shortcut icon" href="assets/IMG/favicon.png" type="image/x-icon" />
+    <script src="js/registrate.js"></script>
+
+    <title>CuidaPets</title>
 </head>
+<script>
+    seccionActual = "";
+    function irASeccion(destino) {
+        if (destino != seccionActual) {
+
+            // recupero contenido html de la seccion a la que quiero ir
+            $.get(destino + ".html", function (contenidoRecuperado) {
+                $("#contenido").html(contenidoRecuperado);
+            });
+
+            // piso con el contenido recuperado el contenido del div en donde muestro contenido
+
+
+            //document.getElementById(seccionActual).style.display = "none";
+            //document.getElementById(destino).style.display = "block";
+
+            seccionActual = destino;
+        }
+    }
+
+</script>
 
 <body>
     <header>
@@ -40,128 +69,54 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
                     <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" href="sobreNosotros.html">Sobre Nosotros</a>
+                        <li class="nav-item nav justify-content-center" id="menuSeccionHome">
+                            <a class="nav-link active" onclick="irASeccion('seccionHome');">Home</a>
                         </li>
-                        <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" href="cuidadores.html">Cuidadores</a>
+                        <li class="nav-item nav justify-content-center" id="menuSeccionSobreNosotros">
+                            <a class="nav-link active" onclick="irASeccion('seccionSobreNosotros')">Sobre Nosotros</a>
                         </li>
-                        <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" href="contactanos.html">Contáctanos</a>
+                        <li class="nav-item nav justify-content-center" id="menuSeccionCuidadores">
+                            <a class="nav-link active" onclick="irASeccion('seccionCuidadores');">Cuidadores</a>
                         </li>
-                        <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" href="registrate.html">Registrate</a>
+                        <li class="nav-item nav justify-content-center" id="menuSeccionContactanos">
+                            <a class="nav-link active" onclick="irASeccion('seccionContactanos')">Contáctanos</a>
                         </li>
-                        <li class="nav-item nav justify-content-center">
-                            <a class="nav-link active" href="iniciarSesion.html"><i class="fa-regular fa-user h4"></i></a>
+                        <!--
+                        <li class="nav-item nav justify-content-center" id="menuRegistrate">
+                            <a class="nav-link active" onclick="irASeccion('seccionRegistrate');">Registrate</a>
+                        </li>
+                        -->
+                        <li class="nav-item nav justify-content-center dropdown" id="menuPerfil" style="display:none;">
+                            <a class="nav-link active dropdown-toggle" href="#" id="menuPerfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-user" aria-hidden="true" id="menuPerfilUserName">&nbsp;Usuario</i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Mi ficha</a></li>
+                                <li><a class="dropdown-item" href="#">Mis servicios</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" onclick="cerrarSesion();" id="menuCerrarSesionLink">
+                                        <i class="fa fa-sign-out" aria-hidden="true"> Salir</i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav justify-content-center" id="menuIniciarSesion">
+                            <a class="nav-link active" onclick="irASeccion('seccionIniciarSesion');">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            </a>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </nav>
     </div>
     <!-- FIN DE NAVBAR -->
-    
+
     <main>
-        <!-- Cambio, pasar seccion experiencias de usuario a main en home para utilizar todo el home como contenido promocional -->
-        <div class="width__sections">
-            <section class="section">
-                <h2 class="section__title text-center">Necesitas que alguien cuide tu mascota?</h2><br>
-                <img src="./assets/IMG/cuidados.jpeg" alt="cuidados" class="w-75 h-50 img-thumbnail"> <br>
-                <p class="section__p text-justify">
-                    Entendemos que existen muchos motivos por los cuales contratar a alguien que cuide de tu mascota es
-                    la decisión mas sabia a tomar, independientemente de cuál sea tu motivo, <strong>CuidaPets</strong>
-                    te ayudará a encontrar cuidadores que se adapten a tus necesidades y las de tu mascota.
-                <ul>
-                    <li>El pago lo acuerdas con el cuidador</li>
-                    <li>En ningún momento te cobraremos por usar nuestros servicios</li>
-                    <li>Podrás ver los cuidadores mejor puntuados y participar puntuando al cuidador que hayas
-                        contratado.</li>
-                </ul>
-                </p>
-                <!-- aca posible imagen , video , etc -->
-            </section>
-
-
-            <section class="section">
-                <h2 class="section__title text-center">Que beneficios tengo al contratar un cuidador?</h2><br>
-
-                <img src="./assets/IMG/cuidador.jpg" alt="cuidador chocando los cinco con perro"
-                    class="w-75 h-50 img-thumbnail"> <br>
-
-                <p class="section__p text-justify">
-                    Cada vez más dueños de mascotas utilizan los servicios de cuidadores de mascotas profesionales para
-                    aprovechar los beneficios que brinda el cuidado de mascotas en el hogar:
-                <ul>
-                    <li>Las mascotas son más felices y experimentan menos estrés.</li>
-                    <li>Las rutinas de dieta y ejercicio son ininterrumpidas.</li>
-                    <li>Se elimina el trauma del viaje tanto para el dueño como para la mascota.</li>
-                    <li>Se minimiza la exposición de las mascotas a enfermedades.</li>
-                    <li>No es necesario llamar a amigos/familiares/vecinos no capacitados o no dispuestos.</li>
-                </ul>
-                </p>
-                <!-- aca posible imagen , video , etc -->
-            </section>
-
-
-            <section class="section">
-                <h2 class="section__title text-center">Quieres trabajar cuidando mascotas?</h2> <br>
-
-                <img src="./assets/IMG/food-cat.jpg" alt="persona alimentando gato" class="w-75 h-50 img-thumbnail">
-                <br>
-
-                <p class="section__p text-justify">
-                    Registrate en nuestra web y publicítate como cuidador de mascotas, ten en cuenta que los dueños de
-                    las mascotas podrán <b>puntuar tu desempeño</b>, es decir, mientras mejor hagas tu trabajo, mas
-                    usuarios querrán contratar tus servicios de cuidado.
-
-                <ul>
-                    <li>La oportunidad de ser tu propio jefe</li>
-                    <li>Sin comisiones, <strong>CuidaPets</strong> no te cobrará ni te descontará nada.</li>
-                    <li>El precio del servicio lo pones tú</li>
-                </ul>
-                <p class="section__p text-justify">
-                    Los cuidadores de mascotas realizan una variedad de tareas, que incluyen:
-                </p>
-
-                <ul>
-                    <li>En primer lugar, ¡amar los animales!</li>
-                    <li>Alimentar a las mascotas y cambiar sus tazones de agua.</li>
-                    <li>Proporcionar ejercicio y tiempo de juego (puede incluir pasear al perro)</li>
-                    <li>Limpiar cajas de arena y limpiar cualquier otro desorden de mascotas.</li>
-                    <li>Administrar medicamentos para mascotas, si es necesario.</li>
-                </ul>
-
-                </p>
-                <!-- aca posible imagen , video , etc -->
-            </section>
+        <div id="contenido" class="container-lg">
         </div>
-
-
-        <h3 class="section__title text-center">Algunas experiencias de nuestros usuarios</h3><br>
-
-        <img class="rounded-circle img__user" src="assets/IMG/exp_perf_1.jpg" alt="foto de un usuario"> <i>Fernanda -
-            C.A.B.A</i>
-        <p class="section__p text-center"> <i>-La verdad no puedo estar mas contenta con la web, es muy fácil de usar y
-                mis mascotas estuvieron super cuidadas cuando me fui de vacaciones. </i>
-        </p>
-        <br>
-
-        <img class="rounded-circle img__user" src="assets/IMG/exp_perf_2.jpg" alt="foto de un usuario"> <i>Juan - Prov.
-            de Buenos Aires</i>
-        <p class="section__p text-center"> <i>-Necesitaba a alguien responsable que pudiera darle la medicación a mi
-                perro, gracias a este sitio pude contactar con un chico super responsable que se hizo cargo de todo
-                mientras yo trabajaba. </i>
-        </p>
-        <br>
-
-        <img class="rounded-circle img__user" src="assets/IMG/exp_perf_3.jpg" alt="foto de un usuario"> <i>Milagros -
-            C.A.B.A</i>
-        <p class="section__p text-center"> <i>-Nunca pensé que gracias a <b>CuidaPets</b> iba a poder convertir mi
-                pasión por los animales en una fuente de ingreso. Soy feliz, porque vivo de lo que mas me gusta hacer.
-            </i>
-        </p>
-
     </main>
 
 
@@ -169,8 +124,8 @@
 
         <footer class="py-3 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item"><a href="faq.html" class="nav-link px-2 text-muted">Preguntas frecuentes</a></li>
+                <li class="nav-item"><a class="nav-link px-2 text-muted" onclick="irASeccion('seccionHome');">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-2 text-muted" onclick="irASeccion('seccionFaq');">Preguntas frecuentes</a></li>
             </ul>
             <h6 class="text-center">Nuestras redes sociales</h6>
             <div class="d-flex align-items-center justify-content-center">
@@ -188,7 +143,33 @@
 
 </body>
 <script src="./js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
 <!-- Font awesome -->
+<script src="https://kit.fontawesome.com/6dfa6ca8b0.js" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        if (localStorage.getItem("email") !== null) {
+            //document.getElementById("menuRegistrate").style.display = "none";
+            document.getElementById("menuIniciarSesion").style.display = "none";
+            document.getElementById("menuPerfil").style.display = "block";
+            document.getElementById("menuPerfilUserName").textContent = " "+localStorage.getItem('username');
+
+            //document.getElementById("iniciarSesionSpinner").style.display = "none";
+            //document.getElementById("menuCerrarSesionLink").textContent = "Cerrar sesion "+localStorage.getItem('email');
+
+        } else {
+            //document.getElementById("menuRegistrate").style.display = "block";
+            document.getElementById("menuIniciarSesion").style.display = "block";
+            document.getElementById("menuPerfil").style.display = "none";
+            //document.getElementById("iniciarSesionError").style.display = "none";    
+        }
+        irASeccion('seccionHome');
+        console.log("ready!");
+    });
+</script>
 <script src="https://kit.fontawesome.com/6dfa6ca8b0.js" crossorigin="anonymous"></script>
 
 </html>

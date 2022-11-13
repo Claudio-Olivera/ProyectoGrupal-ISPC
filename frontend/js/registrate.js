@@ -69,10 +69,10 @@ function cerrarSesion(){
     localStorage.removeItem('email');
     localStorage.removeItem('sessionToken');
 
-    document.getElementById("menuRegistrate").style.display = "block";
+//    document.getElementById("menuRegistrate").style.display = "block";
     document.getElementById("menuIniciarSesion").style.display = "block";
-    document.getElementById("menuCerrarSesion").style.display = "none";
-    document.getElementById("iniciarSesionError").style.display = "none";    
+    document.getElementById("menuPerfil").style.display = "none";
+    // document.getElementById("iniciarSesionError").style.display = "none";    
 }
 
 function login(){
@@ -107,11 +107,13 @@ function login(){
                     $("#IniciarSesionModal").modal("toggle");
                     localStorage.setItem('sessionToken',result.additionalData.sessionToken);
                     localStorage.setItem('email',result.additionalData.email);
+                    localStorage.setItem('username',loginUserName);
 
-                    document.getElementById("menuRegistrate").style.display = "none";
+                    //document.getElementById("menuRegistrate").style.display = "none";
                     document.getElementById("menuIniciarSesion").style.display = "none";
-                    document.getElementById("menuCerrarSesion").style.display = "block";
-                    document.getElementById("menuCerrarSesionLink").textContent = "Cerrar sesion "+localStorage.getItem('email');
+                    document.getElementById("menuPerfil").style.display = "block";
+                    document.getElementById("menuPerfilUserName").textContent = " "+localStorage.getItem('username');
+                    irASeccion('seccionHome');
 
                     // SI el backnd responde OK
                     //document.getElementById("mensajeDeError").style.display = "none";
@@ -142,9 +144,6 @@ function login(){
         document.getElementById("iniciarSesionError").style.display = "block";
         console.log("Hay errores: " + errores)
     }
-    console.log(nombreUsuario);
-    return false;
-
 }
 
 

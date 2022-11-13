@@ -4,7 +4,7 @@ try:
     connection = mysql.connector.connect(host='localhost',
                                         database='new_schema',
                                         user='root',
-                                        password='rionegri12')
+                                        password='1234')
 
 
 #Claudio Olivera: - Esta tabla Contacto se genera sin ser conectada a otras tablas, no se necesitan autenticaciones de usuario ya que esta echa para que cualquiera que acceda a la web, pueda enviar un mensaje. 

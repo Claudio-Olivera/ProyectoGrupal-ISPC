@@ -4,7 +4,7 @@ try:
     connection = mysql.connector.connect(host='localhost',
                                         database='new_schema',
                                         user='root',
-                                        password='rionegri12')
+                                        password='1234')
 
 
 #Claudio Olivera: -Esta tabla User contendrá los datos del primer registro del Usuario.
