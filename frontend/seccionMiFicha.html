@@ -1,0 +1,76 @@
+<script>
+    function saveBusinessCard(){
+        var businessCardDescriptionParam = document.getElementById("serviceDescription").value.trim();
+
+        $.ajax({
+            type: "POST",
+            url: "http://bsp-cuidapets.xh.ar/api/businesscard/update",
+            data: JSON.stringify({
+                businessCardDescription: businessCardDescriptionParam}),
+            headers: {"Authorization": localStorage.getItem('sessionToken')},
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                //      debugger;
+                if (result.status == "ok") {
+                    // SI el backnd responde OK
+                    //document.getElementById("mensajeDeError").style.display = "none";
+                    //document.getElementById("botonRegistro").style.display = "none";
+                    //document.getElementById("mensajeExitoso").style.display = "block";
+                    console.log(result);
+                } else {
+                    // SINO (si el backend no pudo guardar el suario)
+                    //document.getElementById("mensajeDeError").textContent = result.message;
+                    //document.getElementById("mensajeDeError").style.display = "block";
+                    console.log(result);
+                }
+                // FIN
+            },
+            failure: function (errMsg) { console.log(errMsg); }
+        });
+
+    }
+</script>
+<h1 class="h1__contactanos">Mi Ficha</h1>
+<div class="container py-4">
+    <form id="contactForm">
+        <div class="mb-3">
+            <label class="form-label" for="mensaje">Descripción</label>
+            <textarea class="form-control" id="serviceDescription" type="text" placeholder="Ingresá una descripción de tus servicios aquí"></textarea>
+        </div>
+        <div class="d-grid">
+            <button class="btn button__enviar text-white fw-bold btn-lg" type="submit" onclick="saveBusinessCard();">Guardar Ficha</button>
+        </div>
+    </form>
+</div>
+<script>
+    $(document).ready(function () {
+
+        $.ajax({
+            type: "POST",
+            url: "http://bsp-cuidapets.xh.ar/api/businesscard/get",
+            data: JSON.stringify({}),
+            headers: {"Authorization": localStorage.getItem('sessionToken')},
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                //      debugger;
+                if (result.status == "ok") {
+                    document.getElementById("serviceDescription").textContent = result.additionalData.businessCardDescription;
+                    // SI el backnd responde OK
+                    //document.getElementById("mensajeDeError").style.display = "none";
+                    //document.getElementById("botonRegistro").style.display = "none";
+                    //document.getElementById("mensajeExitoso").style.display = "block";
+                    console.log(result);
+                } else {
+                    // SINO (si el backend no pudo guardar el suario)
+                    //document.getElementById("mensajeDeError").textContent = result.message;
+                    //document.getElementById("mensajeDeError").style.display = "block";
+                    console.log(result);
+                }
+                // FIN
+            },
+            failure: function (errMsg) { console.log(errMsg); }
+        });
+
+        console.log("ficha document ready");
+    });
+</script>
