@@ -7,13 +7,16 @@ http://cuidapets.xh.ar (este tiene un registro y login funcionales, aunque el ba
 ### Netlify:
 https://cuidapets.netlify.app/ (una version previa, solo front)
 
-
 ### Github Pages:
 https://claudio-olivera.github.io/ProyectoGrupal-ISPC/
+
 
 ## Puede visitar el wordpress (Gestión de contenidos) en el siguiente link:
 
 https://instasoft.xh.ar/
+
+# Link al video de presentacion del proyecto
+[Link al video en YouTube](https://www.youtube.com/watch?v=_1J4PirVGls)
 
 ## Project kanban del proyecto link:
 
