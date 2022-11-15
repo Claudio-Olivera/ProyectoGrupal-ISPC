@@ -11,7 +11,7 @@ https://cuidapets.netlify.app/ (una version previa, solo front)
 https://claudio-olivera.github.io/ProyectoGrupal-ISPC/
 
 
-## Puede visitar el wordpress (Gestión de contenidos) en el siguiente link:
+## Podés visitar el sitio de nuestra empresa en el siguiente link (realizado con WordPress):
 
 https://instasoft.xh.ar/
 
