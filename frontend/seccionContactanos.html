@@ -3,15 +3,15 @@
     <form id="contactForm" method="POST">
         <div class="mb-3">
             <label class="form-label" for="name">Nombre</label>
-            <input class="form-control" id="name" type="text" placeholder="Nombre" />
+            <input class="form-control" id="name" type="text" placeholder="Nombre" minlength="3" maxlength="40" required/>
         </div>
         <div class="mb-3">
             <label class="form-label" for="email">Email</label>
-            <input class="form-control" id="email" type="email" placeholder="Email" />
+            <input class="form-control" id="email" type="email" placeholder="Email" minlength="12" maxlength="45" required/>
         </div>
         <div class="mb-3">
             <label class="form-label" for="mensaje">Mensaje</label>
-            <textarea class="form-control" id="mensaje" type="text" placeholder="Mensaje"></textarea>
+            <textarea class="form-control" id="mensaje" type="text" placeholder="Mensaje" minlength="40" maxlength="350" required></textarea>
         </div>
         <div class="d-grid">
             <button class="btn button__enviar text-white fw-bold btn-lg" type="submit">Enviar Mensaje</button>
